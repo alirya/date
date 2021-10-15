@@ -7,8 +7,8 @@ describe(`compiler compatible`,function() {
 
     it(`valid value`,function() {
 
-        let validator = new Validator(StringMessage);
-        let validatable = validator.validate(<unknown>new Date());
+        let validator = Validator(StringMessage);
+        let validatable = validator(<unknown>new Date());
 
         if(validatable.valid) {
 
@@ -26,8 +26,8 @@ describe(`compiler compatible`,function() {
 
     it(`invalid value`,function() {
 
-        let validator = new Validator(StringMessage);
-        let validatable = validator.validate({});
+        let validator = Validator(StringMessage);
+        let validatable = validator({});
 
         if(validatable.valid) {
 
@@ -46,8 +46,8 @@ describe(`compiler compatible`,function() {
 
     it(`readonly`,function() {
 
-        let validator = new Validator(StringMessage);
-        let validatable = validator.validate('1');
+        let validator = Validator(StringMessage);
+        let validatable = validator('1');
 
         try {
             // @ts-expect-error
@@ -74,8 +74,8 @@ describe(`compiler compatible`,function() {
 
 it(`valid`,function() {
 
-    let validator = new Validator(StringMessage);
-    let validatable = validator.validate(new Date());
+    let validator = Validator(StringMessage);
+    let validatable = validator(new Date());
 
     expect(validatable.valid).toBe(true);
     expect(validatable.value).toBeInstanceOf(Date);
@@ -85,8 +85,8 @@ it(`valid`,function() {
 
 it(`invalid`,function() {
 
-    let validator = new Validator(StringMessage);
-    let validatable = validator.validate(1);
+    let validator = Validator(StringMessage);
+    let validatable = validator(1);
 
     expect<boolean>(validatable.valid).toBe(false);
     expect(validatable.value).toBe(1);

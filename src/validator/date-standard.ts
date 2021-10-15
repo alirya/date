@@ -1,7 +1,9 @@
 import Date from "./date";
 import DateMessage from "../validatable/string/compatible";
+import Validator from "@dikac/t-validator/simple";
+import Instance from "@dikac/t-validator/validatable/validatable";
 
-export default function DateStandard() : Date<string> {
+export default function DateStandard() : Validator<unknown, globalThis.Date, Readonly<Instance<unknown, string>>>  {
 
-    return new Date(DateMessage)
+    return Date(DateMessage)
 }

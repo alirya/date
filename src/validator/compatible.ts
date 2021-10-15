@@ -6,22 +6,14 @@ import Validator from "@dikac/t-validator/simple";
 import SimpleValidatable from "@dikac/t-validator/validatable/simple";
 import CompatibleValidatable from "../validatable/compatible";
 
-export default class Compatible<MessageT>
-    implements
-        Validator<unknown, Date|string|number, Readonly<Instance<unknown, MessageT>>>,
-        Message<(result:Readonly<Value> & Readonly<Validatable>)=>MessageT>
-{
+export default function Compatible<MessageT>(
+    message : (result:Readonly<Value> & Readonly<Validatable>)=>MessageT
+) : Validator<unknown, Date|string|number, Readonly<Instance<unknown, MessageT>>> {
 
-    constructor(
-        public message : (result:Readonly<Value> & Readonly<Validatable>)=>MessageT
-    ) {
-    }
+    return function<Type extends number, Argument extends unknown>(value: Type|Argument) {
 
-    validate<Argument extends number>(value: Argument): Readonly<Instance<Argument, MessageT, true>>
-    validate<Argument extends unknown>(value: Argument): SimpleValidatable<unknown, Argument, Date|string|number, Readonly<Instance<unknown, MessageT>>>
-    validate<Argument extends unknown>(value: Argument) {
+        return  CompatibleValidatable(value, message);
 
-        return <SimpleValidatable<unknown, Argument, Date|string|number, Readonly<Instance<number, MessageT>>>> CompatibleValidatable(value, this.message);
-    }
+    } as Validator<unknown, Date|string|number, Readonly<Instance<unknown, MessageT>>>
 }
 

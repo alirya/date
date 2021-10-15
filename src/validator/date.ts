@@ -7,21 +7,13 @@ import Instance from "@dikac/t-validator/validatable/validatable";
 import SimpleValidatable from "@dikac/t-validator/validatable/simple";
 
 
-export default class Date<MessageT>
-    implements
-        Validator<unknown, globalThis.Date, Readonly<Instance<unknown, MessageT>>>,
-        Message<(result:Readonly<Value> & Readonly<Validatable>)=>MessageT>
-{
+export default function Date<MessageT>(
+    message : (result:Readonly<Value> & Readonly<Validatable>)=>MessageT
+) : Validator<unknown, globalThis.Date, Readonly<Instance<unknown, MessageT>>> {
 
-    constructor(
-        public message : (result:Readonly<Value> & Readonly<Validatable>)=>MessageT
-    ) {
-    }
+    return function<Type extends number, Argument extends unknown>(value : Type|Argument) {
 
-    validate<Argument extends number>(value: Argument): Readonly<Instance<Argument, MessageT, true>>
-    validate<Argument extends unknown>(value: Argument): SimpleValidatable<unknown, Argument, globalThis.Date, Readonly<Instance<unknown, MessageT>>>
-    validate<Argument extends unknown>(value: Argument) {
+        return <SimpleValidatable<unknown, Argument, globalThis.Date, Readonly<Instance<number, MessageT>>>> DateValidatable(value, message);
 
-        return <SimpleValidatable<unknown, Argument, globalThis.Date, Readonly<Instance<number, MessageT>>>> DateValidatable(value, this.message);
-    }
+    } as Validator<unknown, globalThis.Date, Readonly<Instance<unknown, MessageT>>>
 }
