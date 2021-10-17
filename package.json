@@ -1,6 +1,6 @@
 {
   "name": "@dikac/t-date",
-  "version": "0.8.1",
+  "version": "0.9.0",
   "description": "Typescript date",
   "dependencies": {
     "@dikac/t-function": "^0.14.2",
