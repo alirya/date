@@ -1,4 +1,4 @@
-export default function Millisecond(milisecond) {
-    return new Date(milisecond);
+export default function Millisecond(milliseconds) {
+    return new Date(milliseconds);
 }
 //# sourceMappingURL=millisecond.js.map

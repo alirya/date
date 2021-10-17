@@ -1,1 +1,1 @@
-export default function Millisecond(milisecond: number): Date;
+export default function Millisecond(milliseconds: number): Date;

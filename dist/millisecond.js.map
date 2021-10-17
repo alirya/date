@@ -1,1 +1,1 @@
-{"version":3,"file":"millisecond.js","sourceRoot":"","sources":["../src/millisecond.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,UAAU,WAAW,CAAC,UAAmB;IAEnD,OAAO,IAAI,IAAI,CAAC,UAAU,CAAC,CAAC;AAChC,CAAC"}
+{"version":3,"file":"millisecond.js","sourceRoot":"","sources":["../src/millisecond.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,UAAU,WAAW,CAAC,YAAqB;IAErD,OAAO,IAAI,IAAI,CAAC,YAAY,CAAC,CAAC;AAClC,CAAC"}
