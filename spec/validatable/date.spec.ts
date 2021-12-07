@@ -1,5 +1,5 @@
-import Validatable from "../../dist/validatable/date";
-import StringMessage from "../../dist/validatable/string/date";
+import Validatable from "../../dist/validatable/date-parameters";
+import StringMessage from "../../dist/assert/string/date-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
 

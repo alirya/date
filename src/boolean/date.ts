@@ -1,4 +1,4 @@
-export default function Date(value: any) : value is globalThis.Date {
+export default function Date(value: unknown) : value is globalThis.Date {
 
     if(!(value instanceof globalThis.Date)) {
 

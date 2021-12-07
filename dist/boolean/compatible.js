@@ -2,10 +2,7 @@ import Date from "./date";
 import Integer from "@dikac/t-number/boolean/integer";
 import Number from "@dikac/t-number/boolean/number";
 import String from "@dikac/t-string/boolean/string";
-export default function Compatible(value, nullable = false) {
-    if (!nullable && value === null) {
-        return false;
-    }
+export default function Compatible(value) {
     if (Date(value)) {
         return true;
     }

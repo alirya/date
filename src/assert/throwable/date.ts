@@ -1,6 +1,6 @@
-import Dateype from "../string/date";
+import Dateype from "../string/date-parameters";
 
 export default function Date(value : unknown, subject : string = '') : Error {
 
-    return new Error(Dateype(false, value, subject))
+    return new Error(Dateype(value, false, subject))
 }

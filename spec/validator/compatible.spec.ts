@@ -1,5 +1,5 @@
-import Compatible from "../../dist/validator/compatible";
-import StringMessage from "../../dist/validatable/string/compatible";
+import Compatible from "../../dist/validator/compatible-parameters";
+import StringMessage from "../../dist/assert/string/compatible-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
 

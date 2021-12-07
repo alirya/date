@@ -1,1 +1,0 @@
-{"version":3,"file":"compatible.js","sourceRoot":"","sources":["../../../src/assert/throwable/compatible.ts"],"names":[],"mappings":"AAAA,OAAO,cAAc,MAAM,sBAAsB,CAAC;AAElD,MAAM,CAAC,OAAO,UAAU,UAAU,CAAC,KAAe,EAAE,UAAmB,EAAE;IAErE,OAAO,IAAI,KAAK,CAAC,cAAc,CAAC,KAAK,EAAE,KAAK,EAAE,OAAO,CAAC,CAAC,CAAA;AAC3D,CAAC"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"compatible.js","sourceRoot":"","sources":["../../src/validator/compatible.ts"],"names":[],"mappings":"AAMA,OAAO,qBAAqB,MAAM,2BAA2B,CAAC;AAE9D,MAAM,CAAC,OAAO,UAAU,UAAU,CAC9B,OAAoE;IAGpE,OAAO,UAAwD,KAAoB;QAE/E,OAAQ,qBAAqB,CAAC,KAAK,EAAE,OAAO,CAAC,CAAC;IAElD,CAAkF,CAAA;AACtF,CAAC"}

@@ -1,1 +1,1 @@
-{"version":3,"file":"compatible-standard.js","sourceRoot":"","sources":["../../src/validator/compatible-standard.ts"],"names":[],"mappings":"AAAA,OAAO,UAAU,MAAM,cAAc,CAAC;AACtC,OAAO,WAAW,MAAM,4BAA4B,CAAC;AAIrD,MAAM,CAAC,OAAO,UAAU,kBAAkB;IAEtC,OAAO,UAAU,CAAC,WAAW,CAAC,CAAA;AAClC,CAAC"}
+{"version":3,"file":"compatible-standard.js","sourceRoot":"","sources":["../../src/validator/compatible-standard.ts"],"names":[],"mappings":"AAAA,8DAA8D;AAC9D,wDAAwD;AACxD,qDAAqD;AACrD,qEAAqE;AACrE,EAAE;AACF,8HAA8H;AAC9H,EAAE;AACF,+CAA+C;AAC/C,IAAI"}

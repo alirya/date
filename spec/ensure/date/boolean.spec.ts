@@ -1,4 +1,4 @@
-import Date from "../../../dist/ensure/date";
+import Date from "../../../dist/ensure/date-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 

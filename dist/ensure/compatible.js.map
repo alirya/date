@@ -1,1 +1,0 @@
-{"version":3,"file":"compatible.js","sourceRoot":"","sources":["../../src/ensure/compatible.ts"],"names":[],"mappings":"AAAA,OAAO,gBAAgB,MAAM,sBAAsB,CAAC;AACpD,OAAO,eAAe,MAAM,gCAAgC,CAAC;AAE7D,MAAM,CAAC,OAAO,UAAU,UAAU,CAC9B,KAAe,EACf,QAAiC,eAAe;IAGhD,gBAAgB,CAAC,KAAK,EAAE,KAAK,CAAC,CAAC;IAE/B,OAAO,KAAK,CAAC;AACjB,CAAC"}

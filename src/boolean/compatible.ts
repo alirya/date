@@ -4,14 +4,8 @@ import Number from "@dikac/t-number/boolean/number";
 import String from "@dikac/t-string/boolean/string";
 
 export default function Compatible(
-    value: any,
-    nullable : boolean = false
+    value: unknown,
 ) : value is globalThis.Date|string|number {
-
-    if(!nullable && value === null) {
-
-        return false;
-    }
 
     if(Date(value)) {
 

@@ -1,0 +1,1 @@
+{"version":3,"file":"compatible-parameters.js","sourceRoot":"","sources":["../../src/ensure/compatible-parameters.ts"],"names":[],"mappings":"AAAA,OAAO,gBAAgB,MAAM,sBAAsB,CAAC;AACpD,OAAO,eAAe,MAAM,2CAA2C,CAAC;AAExE,MAAM,CAAC,OAAO,UAAU,oBAAoB,CACxC,KAAe,EACf,QAAiC,eAAe;IAGhD,gBAAgB,CAAC,KAAK,EAAE,KAAK,CAAC,CAAC;IAE/B,OAAO,KAAK,CAAC;AACjB,CAAC"}
