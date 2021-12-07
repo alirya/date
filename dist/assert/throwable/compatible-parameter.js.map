@@ -1,1 +1,0 @@
-{"version":3,"file":"compatible-parameter.js","sourceRoot":"","sources":["../../../src/assert/throwable/compatible-parameter.ts"],"names":[],"mappings":"AACA,OAAO,oBAAoB,MAAM,yBAAyB,CAAC;AAE3D,MAAM,CAAC,OAAO,UAAU,mBAAmB,CACvC,EACI,KAAK,EACL,OAAO,GACmB;IAG9B,OAAO,oBAAoB,CAAC,KAAK,EAAE,OAAO,CAAC,CAAC;AAChD,CAAC"}
