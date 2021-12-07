@@ -13,7 +13,6 @@ export default function DateParameters<MessageT>(
 ) : Validator<unknown, globalThis.Date, Readonly<Instance<unknown, MessageT>>>;
 
 export default function DateParameters<MessageT>(
-   // message : (result:Readonly<Value> & Readonly<Validatable>)=>MessageT|string = DateMessage
     message : MessageValidatable<unknown, MessageT|string> = DateMessage
 ) : Validator<unknown, globalThis.Date, Readonly<Instance<unknown, MessageT>>> {
 

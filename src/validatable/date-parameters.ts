@@ -7,18 +7,14 @@ import DateMessage from "../assert/string/date-parameters";
 
 export default function DateParameters<Argument>(
     value : Argument,
-    // message : (result:Readonly<Value<Argument> & Validatable>)=>MessageT,
-    // message : MessageValidatable<Argument, MessageT>
 ) : Return<Argument, Date, Readonly<Instance<Argument, string>>>;
 
 export default function DateParameters<MessageT, Argument>(
     value : Argument,
-    // message : (result:Readonly<Value<Argument> & Validatable>)=>MessageT,
     message : MessageValidatable<Argument, MessageT>
 ) : Return<Argument, Date, Readonly<Instance<Argument, MessageT>>>;
 export default function DateParameters<MessageT, Argument>(
     value : Argument,
-    // message : (result:Readonly<Value<Argument> & Validatable>)=>MessageT,
     message : MessageValidatable<Argument, MessageT|string> = DateMessage
 ) : Return<Argument, Date, Readonly<Instance<Argument, MessageT>>> {
 

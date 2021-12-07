@@ -3,8 +3,6 @@ import Value from "@dikac/t-value/value";
 import CompatibleParameters from "./compatible-parameters";
 
 export default function CompatibleParameter(
-    //value : unknown,
-    //error : (value:unknown)=>Error = CompatibleError,
     {
         value,
         error = CompatibleError

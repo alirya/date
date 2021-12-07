@@ -6,19 +6,13 @@ import DateMessage from "../assert/string/compatible-parameter";
 import CompatibleParameters from "./compatible-parameters";
 import Message from "@dikac/t-message/message";
 
-export type DateParameterArgument<MessageT, Argument> = Value<Argument> & Partial<Message<MessageT>>;
-
 export default function CompatibleParameter<Argument>(
-    //value : Argument,
     {
         value,
-       // message,
     } : Value<Argument>
 ) : Return<Argument, globalThis.Date|string|number, Readonly<Instance<Argument, string>>>;
 
 export default function CompatibleParameter<MessageT, Argument>(
-    // value : Argument,
-    // message : MessageValidatable<Argument, MessageT>,
     {
         value,
         message,
@@ -26,8 +20,6 @@ export default function CompatibleParameter<MessageT, Argument>(
 ) : Return<Argument, globalThis.Date|string|number, Readonly<Instance<Argument, MessageT>>>;
 
 export default function CompatibleParameter<MessageT, Argument>(
-    // value : Argument,
-    // message : MessageValidatable<Argument, MessageT> = DateMessage,
     {
         value,
         message = DateMessage,
