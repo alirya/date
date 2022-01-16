@@ -1,5 +1,5 @@
 import Guard from "../boolean/date";
-import Callback from "@dikac/t-function/assert/callback-parameters";
+import Callback from "@alirya/function/assert/callback-parameters";
 import DateError from "./throwable/date";
 
 export default function Date(

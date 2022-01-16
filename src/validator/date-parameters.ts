@@ -1,9 +1,9 @@
-import Validator from "@dikac/t-validator/simple";
+import Validator from "@alirya/validator/simple";
 import DateValidatable from "../validatable/date-parameters";
-import Instance from "@dikac/t-validator/validatable/validatable";
-import SimpleValidatable from "@dikac/t-validator/validatable/simple";
+import Instance from "@alirya/validator/validatable/validatable";
+import SimpleValidatable from "@alirya/validator/validatable/simple";
 import DateMessage from "../assert/string/compatible-parameters";
-import MessageValidatable from "@dikac/t-validator/message/function/validatable-parameters";
+import MessageValidatable from "@alirya/validator/message/function/validatable-parameters";
 
 export default function DateParameters(
 ) : Validator<unknown, globalThis.Date, Readonly<Instance<unknown, string>>>;

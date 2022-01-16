@@ -10,7 +10,7 @@ describe('union', () => {
 
         let result = Date(target);
 
-        // @ts-expect-error
+        // @ts-expecerror
         let number : number = result;
         let date : globalThis.Date = result;
 

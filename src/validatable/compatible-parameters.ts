@@ -1,8 +1,8 @@
-import Callback from "@dikac/t-validator/validatable/callback-function-parameters";
+import Callback from "@alirya/validator/validatable/callback-function-parameters";
 import CompatibleGuard from "../boolean/compatible";
-import Return from "@dikac/t-validator/validatable/simple";
-import Instance from "@dikac/t-validator/validatable/validatable";
-import MessageValidatable from "@dikac/t-validator/message/function/validatable-parameters";
+import Return from "@alirya/validator/validatable/simple";
+import Instance from "@alirya/validator/validatable/validatable";
+import MessageValidatable from "@alirya/validator/message/function/validatable-parameters";
 import DateMessage from "../assert/string/compatible-parameters";
 
 export default function CompatibleParameters<Argument>(

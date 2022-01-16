@@ -10,7 +10,7 @@ describe('union', () => {
 
         let result = Compatible(target);
 
-        // @ts-expect-error
+        // @ts-expecerror
         let number : boolean = result;
         let date : Date|number|string = result;
 

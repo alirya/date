@@ -1,2 +1,2 @@
-# t-date
+# date
 typescript date

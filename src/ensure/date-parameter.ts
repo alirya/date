@@ -1,5 +1,5 @@
 import CompatibleError from "../assert/throwable/compatible-parameters";
-import Value from "@dikac/t-value/value";
+import Value from "@alirya/value/value";
 import DateParameters from "./date-parameters";
 
 export default function DateParameter(

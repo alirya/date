@@ -1,7 +1,7 @@
-import Validator from "@dikac/t-validator/simple";
-import Instance from "@dikac/t-validator/validatable/validatable";
+import Validator from "@alirya/validator/simple";
+import Instance from "@alirya/validator/validatable/validatable";
 import DateMessage from "../assert/string/compatible-parameter";
-import MessageValidatable from "@dikac/t-validator/message/function/validatable-parameter";
+import MessageValidatable from "@alirya/validator/message/function/validatable-parameter";
 import DateParameters from "./date-parameters";
 
 export default function DateParameter(

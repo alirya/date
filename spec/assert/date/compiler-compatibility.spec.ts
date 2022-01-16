@@ -12,7 +12,7 @@ describe('union', () => {
 
         Assert(target);
 
-        // @ts-expect-error
+        // @ts-expecerror
         let number : number = target;
         let date : Date = target;
 
