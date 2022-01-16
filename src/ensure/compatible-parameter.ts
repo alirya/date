@@ -1,6 +1,6 @@
-import CompatibleError from "../assert/throwable/compatible-parameters";
-import Value from "@alirya/value/value";
-import CompatibleParameters from "./compatible-parameters";
+import CompatibleError from '../assert/throwable/compatible-parameters';
+import Value from '@alirya/value/value';
+import CompatibleParameters from './compatible-parameters';
 
 export default function CompatibleParameter(
     {

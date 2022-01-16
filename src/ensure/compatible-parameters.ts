@@ -1,5 +1,5 @@
-import AssertCompatible from "../assert/compatible";
-import CompatibleError from "../assert/throwable/compatible-parameters";
+import AssertCompatible from '../assert/compatible';
+import CompatibleError from '../assert/throwable/compatible-parameters';
 
 export default function CompatibleParameters(
     value : unknown,

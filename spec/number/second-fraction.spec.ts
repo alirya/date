@@ -1,11 +1,11 @@
-import SecondFraction from "../../dist/number/second-fraction";
+import SecondFraction from '../../dist/number/second-fraction';
 
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe('second fraction', () => {
 
-    it("valid", () => {
+    it('valid', () => {
 
         let millisecond = 1472502588123;
 

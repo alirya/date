@@ -1,11 +1,11 @@
-import Date from "../../../dist/ensure/date-parameters";
+import Date from '../../../dist/ensure/date-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`integer`, () => {
 
     try {
-        Date(1)
+        Date(1);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -14,7 +14,7 @@ it(`integer`, () => {
 
 it(`float`, () => {
     try {
-        Date(1.1)
+        Date(1.1);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -24,7 +24,7 @@ it(`float`, () => {
 it(`infinity`, () => {
 
     try {
-        Date(Infinity)
+        Date(Infinity);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -34,7 +34,7 @@ it(`infinity`, () => {
 it(`Nan`, () => {
 
     try {
-        Date(NaN)
+        Date(NaN);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);

@@ -1,6 +1,6 @@
-import Compatible from "../../../dist/assert/string/compatible-parameters";
+import Compatible from '../../../dist/assert/string/compatible-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let data = new Map<[boolean, any, string?], string>();
 

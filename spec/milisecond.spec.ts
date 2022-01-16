@@ -1,10 +1,10 @@
-import Millisecond from "../dist/millisecond";
+import Millisecond from '../dist/millisecond';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe('second', () => {
 
-    it("valid", () => {
+    it('valid', () => {
 
 
         let date = new Date('Monday, 29-Aug-16 20:29:48 UTC');

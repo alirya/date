@@ -1,14 +1,14 @@
-import Instance from "@alirya/validator/validatable/validatable";
-import Validator from "@alirya/validator/simple";
-import CompatibleValidatable from "../validatable/compatible-parameters";
-import MessageValidatable from "@alirya/validator/message/function/validatable-parameters";
-import DateMessage from "../assert/string/date-parameters";
+import Instance from '@alirya/validator/validatable/validatable';
+import Validator from '@alirya/validator/simple';
+import CompatibleValidatable from '../validatable/compatible-parameters';
+import MessageValidatable from '@alirya/validator/message/function/validatable-parameters';
+import DateMessage from '../assert/string/date-parameters';
 
-export default function CompatibleParameters() : Validator<unknown, Date|string|number, Readonly<Instance<unknown, string>>>
+export default function CompatibleParameters() : Validator<unknown, Date|string|number, Readonly<Instance<unknown, string>>>;
 
 export default function CompatibleParameters<MessageT>(
     message : MessageValidatable<unknown, MessageT>
-) : Validator<unknown, Date|string|number, Readonly<Instance<unknown, MessageT>>>
+) : Validator<unknown, Date|string|number, Readonly<Instance<unknown, MessageT>>>;
 
 export default function CompatibleParameters<MessageT>(
     message : MessageValidatable<unknown, MessageT|string> = DateMessage
@@ -18,6 +18,6 @@ export default function CompatibleParameters<MessageT>(
 
         return  CompatibleValidatable(value, message);
 
-    } as Validator<unknown, Date|string|number, Readonly<Instance<unknown, MessageT>>>
+    } as Validator<unknown, Date|string|number, Readonly<Instance<unknown, MessageT>>>;
 }
 

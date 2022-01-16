@@ -1,5 +1,5 @@
-import AssertDate from "../assert/date";
-import DateError from "../assert/throwable/date";
+import AssertDate from '../assert/date';
+import DateError from '../assert/throwable/date';
 
 export default function DateParameters(
     value : unknown,

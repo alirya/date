@@ -1,6 +1,6 @@
-import Undefined from "../../../dist/assert/date";
+import Undefined from '../../../dist/assert/date';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`undefined `, () => {
 

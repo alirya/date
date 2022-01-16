@@ -1,7 +1,7 @@
-import Compatible from "../../dist/validator/compatible-parameters";
-import StringMessage from "../../dist/assert/string/compatible-parameters";
+import Compatible from '../../dist/validator/compatible-parameters';
+import StringMessage from '../../dist/assert/string/compatible-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`compiler compatible`,function() {
 
@@ -20,7 +20,7 @@ describe(`compiler compatible`,function() {
 
             // @ts-expecerror
             let string : Date|number|string = validatable.value;
-            fail('validatable.valid should false')
+            fail('validatable.valid should false');
         }
     });
 
@@ -33,7 +33,7 @@ describe(`compiler compatible`,function() {
 
             // compiler pass
             let string : Date|number|string = validatable.value;
-            fail('validatable.valid should false')
+            fail('validatable.valid should false');
 
         } else {
 
@@ -79,7 +79,7 @@ it(`valid`,function() {
 
     expect(validatable.valid).toBe(true);
     expect(validatable.value).toBe('Monday, 29-Aug-16 20:29:48 UTC');
-    expect(typeof validatable.message).toBe("string");
+    expect(typeof validatable.message).toBe('string');
 
 });
 
@@ -90,7 +90,7 @@ it(`invalid`,function() {
 
     expect(validatable.valid).toBe(false);
     expect(validatable.value).toBe('C');
-    expect(typeof validatable.message).toBe("string");
+    expect(typeof validatable.message).toBe('string');
 
 });
 

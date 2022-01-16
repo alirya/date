@@ -1,6 +1,6 @@
-import Guard from "../boolean/compatible";
-import Callback from "@alirya/function/assert/callback-parameters";
-import NotCompatibleError from "./throwable/compatible-parameters";
+import Guard from '../boolean/compatible';
+import Callback from '@alirya/function/assert/callback-parameters';
+import NotCompatibleError from './throwable/compatible-parameters';
 
 export default function Compatible(
     value : unknown,

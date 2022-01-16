@@ -1,11 +1,11 @@
-import Assert from "../../../dist/assert/date";
+import Assert from '../../../dist/assert/date';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`integer`, () => {
 
     try {
-        Assert(1)
+        Assert(1);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -14,7 +14,7 @@ it(`integer`, () => {
 
 it(`float`, () => {
     try {
-        Assert(1.1)
+        Assert(1.1);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -24,7 +24,7 @@ it(`float`, () => {
 it(`infinity`, () => {
 
     try {
-        Assert(Infinity)
+        Assert(Infinity);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -34,7 +34,7 @@ it(`infinity`, () => {
 it(`Nan`, () => {
 
     try {
-        Assert(NaN)
+        Assert(NaN);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);

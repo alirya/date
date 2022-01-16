@@ -1,11 +1,11 @@
-import Second from "../../dist/number/second";
+import Second from '../../dist/number/second';
 
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe('second', () => {
 
-    it("valid", () => {
+    it('valid', () => {
 
         let millisecond = 1472502588123;
 

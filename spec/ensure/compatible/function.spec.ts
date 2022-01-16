@@ -1,6 +1,6 @@
-import Compatible from "../../../dist/ensure/compatible-parameters";
+import Compatible from '../../../dist/ensure/compatible-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`anonymous `, () => {
     try {

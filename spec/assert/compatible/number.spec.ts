@@ -1,6 +1,6 @@
-import Compatible from "../../../dist/assert/compatible";
+import Compatible from '../../../dist/assert/compatible';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`integer`, () => {
 
@@ -11,7 +11,7 @@ it(`integer`, () => {
 
 it(`float`, () => {
     try {
-        Compatible(1.1)
+        Compatible(1.1);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -21,7 +21,7 @@ it(`float`, () => {
 it(`infinity`, () => {
 
     try {
-        Compatible(Infinity)
+        Compatible(Infinity);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -31,7 +31,7 @@ it(`infinity`, () => {
 it(`Nan`, () => {
 
     try {
-        Compatible(NaN)
+        Compatible(NaN);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
