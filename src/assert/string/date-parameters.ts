@@ -19,11 +19,11 @@ export default function DateParameters(
 
     if(valid) {
 
-        strings.push('must');
+        strings.push('is');
 
     } else {
 
-        strings.push('is');
+        strings.push('must');
     }
 
     strings.push('instanceof Date');

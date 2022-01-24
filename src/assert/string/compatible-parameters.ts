@@ -17,12 +17,11 @@ export default function CompatibleParameters(
 
     if(valid) {
 
-        strings.push('must compatible with');
+        strings.push('is compatible with');
 
     } else {
 
-        strings.push('is compatible with');
-
+        strings.push('must compatible with');
     }
 
     strings.push('Date');
