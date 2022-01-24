@@ -2,7 +2,7 @@ import Compatible from '../../../dist/ensure/compatible-parameters';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-describe('union', () => {
+it('union', () => {
 
     let target : Date|number|string|boolean = new Date();
 
@@ -10,7 +10,7 @@ describe('union', () => {
 
         let result = Compatible(target);
 
-        // @ts-expecerror
+        // @ts-expect-error
         let number : boolean = result;
         let date : Date|number|string = result;
 
@@ -19,7 +19,7 @@ describe('union', () => {
     }
 });
 
-describe('unknown', () => {
+it('unknown', () => {
 
     let target : Date|number|string = new Date();
 

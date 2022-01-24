@@ -2,7 +2,7 @@ import Date from '../../../dist/ensure/date-parameters';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-describe('union', () => {
+it('union', () => {
 
     let target : undefined|number = undefined;
 
@@ -10,7 +10,7 @@ describe('union', () => {
 
         let result = Date(target);
 
-        // @ts-expecerror
+        // @ts-expect-error
         let number : number = result;
         let date : globalThis.Date = result;
 
@@ -19,7 +19,7 @@ describe('union', () => {
     }
 });
 
-describe('unknown', () => {
+it('unknown', () => {
 
     let target : unknown = undefined;
 

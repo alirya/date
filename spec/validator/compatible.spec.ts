@@ -18,7 +18,7 @@ describe(`compiler compatible`,function() {
 
         } else {
 
-            // @ts-expecerror
+            // @ts-expect-error
             let string : Date|number|string = validatable.value;
             fail('validatable.valid should false');
         }
@@ -37,9 +37,9 @@ describe(`compiler compatible`,function() {
 
         } else {
 
-            // @ts-expecerror
+            // @ts-expect-error
             let string : Date|number|string = validatable.value;
-            // @ts-expecerror
+            // @ts-expect-error
             expect(string).toEqual({});
         }
     });
@@ -50,18 +50,18 @@ describe(`compiler compatible`,function() {
         let validatable = validator('1');
 
         try {
-            // @ts-expecerror
+            // @ts-expect-error
             validatable.valid = true;
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
         }
 
-        // @ts-expecerror
+        // @ts-expect-error
         validatable.value = true;
 
         try {
-            // @ts-expecerror
+            // @ts-expect-error
             validatable.message = 'message';
             fail('exception should thrown');
         } catch (e) {
@@ -88,7 +88,7 @@ it(`invalid`,function() {
     let validator = Compatible(StringMessage);
     let validatable = validator('C');
 
-    expect(validatable.valid).toBe(false);
+    expect<boolean>(validatable.valid).toBe(false);
     expect(validatable.value).toBe('C');
     expect(typeof validatable.message).toBe('string');
 

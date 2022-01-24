@@ -3,7 +3,7 @@ import Compatible from '../../../dist/assert/compatible';
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
-describe('union', () => {
+it('union', () => {
 
 
     let target : Date|string|number|boolean = new Date();
@@ -12,7 +12,7 @@ describe('union', () => {
 
         Compatible(target);
 
-        // @ts-expecerror
+        // @ts-expect-error
         let number : boolean = target;
         let compatible : Date|string|number = target;
 
@@ -21,7 +21,7 @@ describe('union', () => {
     }
 });
 
-describe('unknown', () => {
+it('unknown', () => {
 
     let target : unknown = new Date();
 
