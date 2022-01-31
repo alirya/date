@@ -3,7 +3,7 @@ import Assert from '../../../dist/assert/date';
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
-describe('union', () => {
+it('union', () => {
 
 
     let target : Date|number = new Date;
@@ -21,7 +21,7 @@ describe('union', () => {
     }
 });
 
-describe('unknown', () => {
+it('unknown', () => {
 
     let target : unknown = Date;
 
