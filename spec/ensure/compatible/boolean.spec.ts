@@ -1,4 +1,4 @@
-import Compatible from '../../../dist/ensure/compatible-parameters';
+import Compatible from '../../../dist/ensure/compatible';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -6,7 +6,7 @@ it(`true`, () => {
 
     try {
 
-        Compatible(true);
+        Compatible.Parameters(true);
         fail('exception should thrown');
 
     } catch (e) {
@@ -19,7 +19,7 @@ it(`false`, () => {
 
     try {
 
-        Compatible(false);
+        Compatible.Parameters(false);
         fail('exception should thrown');
 
     } catch (e) {

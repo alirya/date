@@ -1,5 +1,5 @@
-import Compatible from '../../dist/validator/compatible-parameters';
-import StringMessage from '../../dist/assert/string/compatible-parameters';
+import Compatible from '../../dist/validator/compatible';
+import StringMessage from '../../dist/assert/string/compatible';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -7,7 +7,7 @@ describe(`compiler compatible`,function() {
 
     it(`valid value`,function() {
 
-        let validator = Compatible(StringMessage);
+        let validator = Compatible.Parameters(StringMessage.Parameters);
         let validatable = validator(<unknown>'Monday, 29-Aug-16 20:29:48 UTC');
 
         if(validatable.valid) {
@@ -26,7 +26,7 @@ describe(`compiler compatible`,function() {
 
     it(`invalid value`,function() {
 
-        let validator = Compatible(StringMessage);
+        let validator = Compatible.Parameters(StringMessage.Parameters);
         let validatable = validator({});
 
         if(validatable.valid) {
@@ -46,7 +46,7 @@ describe(`compiler compatible`,function() {
 
     it(`readonly`,function() {
 
-        let validator = Compatible(StringMessage);
+        let validator = Compatible.Parameters(StringMessage.Parameters);
         let validatable = validator('1');
 
         try {
@@ -74,7 +74,7 @@ describe(`compiler compatible`,function() {
 
 it(`valid`,function() {
 
-    let validator = Compatible(StringMessage);
+    let validator = Compatible.Parameters(StringMessage.Parameters);
     let validatable = validator('Monday, 29-Aug-16 20:29:48 UTC');
 
     expect(validatable.valid).toBe(true);
@@ -85,7 +85,7 @@ it(`valid`,function() {
 
 it(`invalid`,function() {
 
-    let validator = Compatible(StringMessage);
+    let validator = Compatible.Parameters(StringMessage.Parameters);
     let validatable = validator('C');
 
     expect<boolean>(validatable.valid).toBe(false);

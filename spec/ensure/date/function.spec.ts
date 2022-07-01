@@ -1,10 +1,10 @@
-import Date from '../../../dist/ensure/date-parameters';
+import Date from '../../../dist/ensure/date';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`anonymous `, () => {
     try {
-        Date(function () {});
+        Date.Parameters(function () {});
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -13,7 +13,7 @@ it(`anonymous `, () => {
 
 it(`anonymous arrow`, () => {
     try {
-        Date(()=>{});
+        Date.Parameters(()=>{});
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -22,7 +22,7 @@ it(`anonymous arrow`, () => {
 
 it(`named`, () => {
     try {
-        Date(isNaN);
+        Date.Parameters(isNaN);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);

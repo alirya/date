@@ -1,4 +1,4 @@
-import DateString from '../../../dist/assert/string/date-parameters';
+import DateString from '../../../dist/assert/string/date';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -6,7 +6,7 @@ let data = new Map<[boolean, any, string?], string>();
 
 it('true', ()=>{
 
-    expect(DateString( {}, true, 'value')).toBe(
+    expect(DateString.Parameters( {}, true, 'value')).toBe(
         'value is instanceof Date.'
     );
 
@@ -14,7 +14,7 @@ it('true', ()=>{
 
 it('false', ()=>{
 
-    expect(DateString( {}, false, 'value')).toBe(
+    expect(DateString.Parameters( {}, false, 'value')).toBe(
         'value must instanceof Date, actual object.'
     );
 

@@ -1,5 +1,5 @@
-import Validatable from '../../dist/validatable/compatible-parameters';
-import StringMessage from '../../dist/assert/string/date-parameters';
+import {CompatibleParameters} from '../../dist/validatable/compatible';
+import {DateParameters} from '../../dist/assert/string/date';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -8,7 +8,7 @@ describe(`compiler compatible`,function() {
 
     it(`valid value`,function() {
 
-        let validatable = Validatable(<unknown>'Monday, 29-Aug-16 20:29:48 UTC', StringMessage);
+        let validatable = CompatibleParameters(<unknown>'Monday, 29-Aug-16 20:29:48 UTC', DateParameters);
 
         if(validatable.valid) {
 
@@ -26,7 +26,7 @@ describe(`compiler compatible`,function() {
 
     it(`invalid value`,function() {
 
-        let validatable = Validatable(<unknown>{}, StringMessage);
+        let validatable = CompatibleParameters(<unknown>{}, DateParameters);
 
         if(validatable.valid) {
 
@@ -45,7 +45,7 @@ describe(`compiler compatible`,function() {
 
     it(`readonly`,function() {
 
-        let validatable = Validatable(<unknown>1, StringMessage);
+        let validatable = CompatibleParameters(<unknown>1, DateParameters);
 
         try {
             // @ts-expect-error
@@ -72,7 +72,7 @@ describe(`compiler compatible`,function() {
 
 it(`valid`,function() {
 
-    let validatable = Validatable('Monday, 29-Aug-16 20:29:48 UTC', StringMessage);
+    let validatable = CompatibleParameters('Monday, 29-Aug-16 20:29:48 UTC', DateParameters);
 
     expect(validatable.valid).toBe(true);
     expect(validatable.value).toBe('Monday, 29-Aug-16 20:29:48 UTC');
@@ -82,7 +82,7 @@ it(`valid`,function() {
 
 it(`invalid`,function() {
 
-    let validatable = Validatable('1C1', StringMessage);
+    let validatable = CompatibleParameters('1C1', DateParameters);
 
     expect(validatable.valid).toBe(false);
     expect(validatable.value).toBe('1C1');

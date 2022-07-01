@@ -1,6 +1,24 @@
-import Dateype from '../string/date-parameters';
+import Dateype from '../string/date';
 
-export default function Date(value : unknown, subject : string = '') : Error {
+export function DateParameters(value : unknown, subject : string = '') : Error {
 
-    return new Error(Dateype(value, false, subject));
+    return new Error(Dateype.Parameters(value, false, subject));
 }
+
+export function DateParameter({
+    value,
+    subject = ''
+} : {
+    value: unknown,
+    subject?: string
+}) : Error {
+
+    return new Error(Dateype.Parameters(value, false, subject));
+}
+
+
+namespace Date {
+    export const Parameters = DateParameters;
+    export const Parameter = DateParameter;
+}
+export default Date;

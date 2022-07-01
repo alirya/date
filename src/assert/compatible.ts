@@ -1,11 +1,11 @@
 import Guard from '../boolean/compatible';
-import Callback from '@alirya/function/assert/callback-parameters';
-import NotCompatibleError from './throwable/compatible-parameters';
+import {CallbackParameters} from '@alirya/function/assert/callback';
+import CompatibleError from './throwable/compatible';
 
 export default function Compatible(
     value : unknown,
-    error : (value:unknown)=>Error = NotCompatibleError
+    error : (value:unknown)=>Error = CompatibleError.Parameters
 ) : asserts value is globalThis.Date|string|number {
 
-    Callback(value, Guard, error);
+    CallbackParameters(value, Guard, error);
 }

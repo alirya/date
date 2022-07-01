@@ -1,4 +1,4 @@
-import Compatible from '../../../dist/ensure/compatible-parameters';
+import Compatible from '../../../dist/ensure/compatible';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -8,7 +8,7 @@ it('union', () => {
 
     try {
 
-        let result = Compatible(target);
+        let result = Compatible.Parameters(target);
 
         // @ts-expect-error
         let number : boolean = result;
@@ -25,7 +25,7 @@ it('unknown', () => {
 
     try {
 
-        let result = Compatible(target);
+        let result = Compatible.Parameters(target);
 
         let date : Date|number|string = result;
 

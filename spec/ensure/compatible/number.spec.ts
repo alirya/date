@@ -1,4 +1,4 @@
-import Compatible from '../../../dist/ensure/compatible-parameters';
+import Compatible from '../../../dist/ensure/compatible';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -6,12 +6,12 @@ it(`integer`, () => {
 
     let date = 1;
 
-    expect(Compatible(date)).toBe(date);
+    expect(Compatible.Parameters(date)).toBe(date);
 });
 
 it(`float`, () => {
     try {
-        Compatible(1.1);
+        Compatible.Parameters(1.1);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -21,7 +21,7 @@ it(`float`, () => {
 it(`infinity`, () => {
 
     try {
-        Compatible(Infinity);
+        Compatible.Parameters(Infinity);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -31,7 +31,7 @@ it(`infinity`, () => {
 it(`Nan`, () => {
 
     try {
-        Compatible(NaN);
+        Compatible.Parameters(NaN);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);

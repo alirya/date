@@ -1,10 +1,10 @@
-import Date from '../../../dist/ensure/date-parameters';
+import {DateParameters} from '../../../dist/ensure/date';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`plain`, () => {
     try {
-        Date({});
+        DateParameters({});
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -13,7 +13,7 @@ it(`plain`, () => {
 
 it(`instance`, () => {
     try {
-        Date(new Map());
+        DateParameters(new Map());
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -21,7 +21,7 @@ it(`instance`, () => {
 });
 
 it(`date`, () => {
-    expect(Date(new globalThis.Date())).toBeInstanceOf(globalThis.Date);
+    expect(DateParameters(new globalThis.Date())).toBeInstanceOf(globalThis.Date);
 });
 
 

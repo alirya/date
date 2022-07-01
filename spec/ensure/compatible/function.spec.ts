@@ -1,10 +1,10 @@
-import Compatible from '../../../dist/ensure/compatible-parameters';
+import Compatible from '../../../dist/ensure/compatible';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`anonymous `, () => {
     try {
-        Compatible(function () {});
+        Compatible.Parameters(function () {});
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -13,7 +13,7 @@ it(`anonymous `, () => {
 
 it(`anonymous arrow`, () => {
     try {
-        Compatible(()=>{});
+        Compatible.Parameters(()=>{});
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -22,7 +22,7 @@ it(`anonymous arrow`, () => {
 
 it(`named`, () => {
     try {
-        Compatible(isNaN);
+        Compatible.Parameters(isNaN);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);

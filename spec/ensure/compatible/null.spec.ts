@@ -1,10 +1,10 @@
-import Compatible from '../../../dist/ensure/compatible-parameters';
+import Compatible from '../../../dist/ensure/compatible';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`null`, () => {
     try {
-        Compatible(null);
+        Compatible.Parameters(null);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);

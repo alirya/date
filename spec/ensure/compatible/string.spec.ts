@@ -1,10 +1,10 @@
-import Compatible from '../../../dist/ensure/compatible-parameters';
+import {CompatibleParameters} from '../../../dist/ensure/compatible';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`primitive`, () => {
     try {
-        Compatible('str');
+        CompatibleParameters('str');
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -13,7 +13,7 @@ it(`primitive`, () => {
 
 it(`object`, () => {
     try {
-        Compatible(new String('str'));
+        CompatibleParameters(new String('str'));
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -25,7 +25,7 @@ it(`compatible`, () => {
 
     let date = 'Monday, 29-Aug-16 20:29:48 UTC';
 
-    expect(Compatible(date)).toBe(date);
+    expect(CompatibleParameters(date)).toBe(date);
 });
 
 

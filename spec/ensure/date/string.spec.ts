@@ -1,10 +1,10 @@
-import Date from '../../../dist/ensure/date-parameters';
+import {DateParameters} from '../../../dist/ensure/date';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`primitive`, () => {
     try {
-        Date('str');
+        DateParameters('str');
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
@@ -13,7 +13,7 @@ it(`primitive`, () => {
 
 it(`object`, () => {
     try {
-        Date(new String('str'));
+        DateParameters(new String('str'));
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);

@@ -1,11 +1,11 @@
 import Guard from '../boolean/date';
-import Callback from '@alirya/function/assert/callback-parameters';
+import {CallbackParameters} from '@alirya/function/assert/callback';
 import DateError from './throwable/date';
 
 export default function Date(
     value : unknown,
-    error : (value:unknown)=>Error = DateError
+    error : (value:unknown)=>Error = DateError.Parameters
 ) : asserts value is globalThis.Date {
 
-    Callback(value, Guard, error);
+    CallbackParameters(value, Guard, error);
 }

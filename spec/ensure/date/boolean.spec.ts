@@ -1,4 +1,4 @@
-import Date from '../../../dist/ensure/date-parameters';
+import {DateParameters} from '../../../dist/ensure/date';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -6,7 +6,7 @@ it(`true`, () => {
 
     try {
 
-        Date(true);
+        DateParameters(true);
         fail('exception should thrown');
 
     } catch (e) {
@@ -19,7 +19,7 @@ it(`false`, () => {
 
     try {
 
-        Date(false);
+        DateParameters(false);
         fail('exception should thrown');
 
     } catch (e) {
