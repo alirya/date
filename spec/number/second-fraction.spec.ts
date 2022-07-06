@@ -1,4 +1,4 @@
-import SecondFraction from '../../dist/number/second-fraction';
+import SecondFraction from '../../dist/number/second-fraction.js';
 
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});

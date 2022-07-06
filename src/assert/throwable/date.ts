@@ -1,4 +1,4 @@
-import Dateype from '../string/date';
+import Dateype from '../string/date.js';
 
 export function DateParameters(value : unknown, subject : string = '') : Error {
 

@@ -1,5 +1,5 @@
-import Compatible from '../../dist/validator/compatible';
-import StringMessage from '../../dist/assert/string/compatible';
+import Compatible from '../../dist/validator/compatible.js';
+import StringMessage from '../../dist/assert/string/compatible.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

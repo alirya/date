@@ -1,7 +1,7 @@
-import Date from './date';
-import Integer from '@alirya/number/boolean/integer';
-import Number from '@alirya/number/boolean/number';
-import String from '@alirya/string/boolean/string';
+import Date from './date.js';
+import Integer from '@alirya/number/boolean/integer.js';
+import Number from '@alirya/number/boolean/number.js';
+import String from '@alirya/string/boolean/string.js';
 
 export default function Compatible(
     value: unknown,

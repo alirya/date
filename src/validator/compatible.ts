@@ -1,8 +1,8 @@
-import Instance from '@alirya/validator/validatable/validatable';
-import Validator from '@alirya/validator/simple';
-import CompatibleValidatable from '../validatable/compatible';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import DateMessage from '../assert/string/date';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import Validator from '@alirya/validator/simple.js';
+import CompatibleValidatable from '../validatable/compatible.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import DateMessage from '../assert/string/date.js';
 
 export function CompatibleParameters() : Validator<unknown, Date|string|number, Readonly<Instance<unknown, string>>>;
 

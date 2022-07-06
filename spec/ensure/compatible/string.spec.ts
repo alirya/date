@@ -1,4 +1,4 @@
-import {CompatibleParameters} from '../../../dist/ensure/compatible';
+import {CompatibleParameters} from '../../../dist/ensure/compatible.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

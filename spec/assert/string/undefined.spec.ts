@@ -1,4 +1,4 @@
-import DateString from '../../../dist/assert/string/date';
+import DateString from '../../../dist/assert/string/date.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

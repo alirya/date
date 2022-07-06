@@ -1,4 +1,4 @@
-import Millisecond from '../dist/millisecond';
+import Millisecond from '../dist/millisecond.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

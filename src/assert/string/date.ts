@@ -1,6 +1,6 @@
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import Compatible from './date';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Compatible from './date.js';
 /**
  * string intended for Date message
  *

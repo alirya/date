@@ -1,4 +1,4 @@
-import Second from '../dist/second';
+import Second from '../dist/second.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

@@ -1,5 +1,5 @@
-import {CompatibleParameters} from '../../dist/validatable/compatible';
-import {DateParameters} from '../../dist/assert/string/date';
+import {CompatibleParameters} from '../../dist/validatable/compatible.js';
+import {DateParameters} from '../../dist/assert/string/date.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

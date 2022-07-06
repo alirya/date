@@ -1,4 +1,4 @@
-import Compatible from '../../dist/boolean/compatible';
+import Compatible from '../../dist/boolean/compatible.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
