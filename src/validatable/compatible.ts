@@ -6,22 +6,23 @@ import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/mes
 import DateMessage from '../assert/string/compatible';
 import Value from '@alirya/value/value';
 import Message from '@alirya/message/message';
+import CompatibleType from '../compatible';
 
 export function CompatibleParameters<Argument>(
     value : Argument,
-) : Return<Argument, globalThis.Date|string|number, Readonly<Instance<Argument, string>>>;
+) : Return<Argument, CompatibleType, Readonly<Instance<Argument, string>>>;
 
 export function CompatibleParameters<MessageT, Argument>(
     value : Argument,
     message : ValidatableParameters<Argument, MessageT>
-) : Return<Argument, globalThis.Date|string|number, Readonly<Instance<Argument, MessageT>>>;
+) : Return<Argument, CompatibleType, Readonly<Instance<Argument, MessageT>>>;
 
 export function CompatibleParameters<MessageT, Argument>(
     value : Argument,
     message : ValidatableParameters<Argument, MessageT|string> = DateMessage.Parameters
-) : Return<Argument, globalThis.Date|string|number, Readonly<Instance<Argument, MessageT>>> {
+) : Return<Argument, CompatibleType, Readonly<Instance<Argument, MessageT>>> {
 
-    return <Return<Argument, globalThis.Date|string|number, Readonly<Instance<Argument, MessageT>>>> CallbackParameters(value, CompatibleGuard, message);
+    return <Return<Argument, CompatibleType, Readonly<Instance<Argument, MessageT>>>> CallbackParameters(value, CompatibleGuard, message);
 }
 
 
@@ -29,14 +30,14 @@ export function CompatibleParameter<Argument>(
     {
         value,
     } : Value<Argument>
-) : Return<Argument, globalThis.Date|string|number, Readonly<Instance<Argument, string>>>;
+) : Return<Argument, CompatibleType, Readonly<Instance<Argument, string>>>;
 
 export function CompatibleParameter<MessageT, Argument>(
     {
         value,
         message,
     } : Value<Argument> & Message<ValidatableParameter<Argument, MessageT>>
-) : Return<Argument, globalThis.Date|string|number, Readonly<Instance<Argument, MessageT>>>;
+) : Return<Argument, CompatibleType, Readonly<Instance<Argument, MessageT>>>;
 
 export function CompatibleParameter<MessageT, Argument>(
     {
@@ -44,7 +45,7 @@ export function CompatibleParameter<MessageT, Argument>(
         message = DateMessage.Parameter,
     } : Value<Argument> & Message<ValidatableParameter<Argument, MessageT|string>>
 
-) : Return<Argument, globalThis.Date|string|number, Readonly<Instance<Argument, MessageT|string>>> {
+) : Return<Argument, CompatibleType, Readonly<Instance<Argument, MessageT|string>>> {
 
     return CompatibleParameters(value, (value, valid) => message({value, valid}));
 }

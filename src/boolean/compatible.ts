@@ -2,10 +2,11 @@ import Date from './date';
 import Integer from '@alirya/number/boolean/integer';
 import Number from '@alirya/number/boolean/number';
 import String from '@alirya/string/boolean/string';
+import CompatibleType from '../compatible';
 
 export default function Compatible(
     value: unknown,
-) : value is globalThis.Date|string|number {
+) : value is CompatibleType {
 
     if(Date(value)) {
 

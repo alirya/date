@@ -1,11 +1,12 @@
 import AssertCompatible from '../assert/compatible';
 import CompatibleError from '../assert/throwable/compatible';
 import Value from '@alirya/value/value';
+import CompatibleType from '../compatible';
 
 export function CompatibleParameters(
     value : unknown,
     error : (value:unknown)=>Error = CompatibleError.Parameters
-) : globalThis.Date|string|number  {
+) : CompatibleType  {
 
     AssertCompatible(value, error);
 
@@ -20,7 +21,7 @@ export function CompatibleParameter(
     } : Value<unknown> & {
         error : (value:unknown)=>Error
     }
-) : globalThis.Date|string|number  {
+) : CompatibleType  {
 
     return CompatibleParameters(value, error);
 }
