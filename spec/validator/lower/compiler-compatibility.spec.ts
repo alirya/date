@@ -1,10 +1,11 @@
 import {LowerParameters} from '../../../dist/validator/lower';
 import LowerString from '../../../dist/assert/string/lower';
+import Unit from '../../../dist/record/unit';
 
 
 describe(`compiler compatible`,function() {
 
-    let validator = LowerParameters<string>(1, false, LowerString.Parameters);
+    let validator = LowerParameters<string>(1, Unit.DAY, false, LowerString.Parameters);
     let validatable = validator(2);
 
     it('set valid', ()=>{
