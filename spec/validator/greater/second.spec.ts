@@ -1,0 +1,103 @@
+import {GreaterParameters} from '../../../dist/validator/greater';
+import GreaterString from '../../../dist/assert/string/greater';
+import Unit from '../../../dist/record/unit';
+
+
+describe(`value equal to minimum`,function() {
+
+    describe(`inclusive`,function() {
+
+        let validator = GreaterParameters<string>( '2022-12-20 20:40:00', Unit.SECOND, true, GreaterString.Parameters);
+        let validatable = validator('2022-12-20 20:40:00');
+
+        it('validate object', ()=>{
+
+            expect(validatable.valid).toBeTrue();
+            expect(validatable.value).toBe('2022-12-20 20:40:00');
+            expect(validatable.minimum).toBe('2022-12-20 20:40:00');
+            expect(validatable.inclusive).toBeTrue();
+
+        });
+    });
+
+    describe(`exclusive`,function() {
+
+        let validator = GreaterParameters<string>('2022-12-20 20:40:00', Unit.SECOND, false, GreaterString.Parameters);
+        let validatable = validator('2022-12-20 20:40:00');
+
+        it('validate object', ()=>{
+
+            expect(validatable.valid).toBeFalse();
+            expect(validatable.value).toBe('2022-12-20 20:40:00');
+            expect(validatable.minimum).toBe('2022-12-20 20:40:00');
+            expect(validatable.inclusive).toBeFalse();
+
+        });
+    });
+});
+
+describe(`value greater to minimum`,function() {
+
+    describe(`inclusive`,function() {
+
+        let validator = GreaterParameters<string>( '2022-12-20 20:40:01', Unit.SECOND, true, GreaterString.Parameters);
+        let validatable = validator('2022-12-20 20:40:02');
+
+        it('validate object', ()=>{
+
+            expect(validatable.valid).toBeTrue();
+            expect(validatable.value).toBe('2022-12-20 20:40:02');
+            expect(validatable.minimum).toBe('2022-12-20 20:40:01');
+            expect(validatable.inclusive).toBeTrue();
+
+        });
+    });
+
+    describe(`exclusive`,function() {
+
+        let validator = GreaterParameters<string>('2022-12-20 20:40:01', Unit.SECOND, false, GreaterString.Parameters);
+        let validatable = validator('2022-12-20 20:40:02');
+
+        it('validate object', ()=>{
+
+            expect(validatable.valid).toBeTrue();
+            expect(validatable.value).toBe('2022-12-20 20:40:02');
+            expect(validatable.minimum).toBe('2022-12-20 20:40:01');
+            expect(validatable.inclusive).toBeFalse();
+
+        });
+    });
+});
+
+describe(`value lower to minimum`,function() {
+
+    describe(`inclusive`,function() {
+
+        let validator = GreaterParameters<string>('2022-12-20 20:40:01', Unit.SECOND, true, GreaterString.Parameters);
+        let validatable = validator('2022-12-20 20:40:00');
+
+        it('validate object', ()=>{
+
+            expect(validatable.valid).toBeFalse();
+            expect(validatable.value).toBe('2022-12-20 20:40:00');
+            expect(validatable.minimum).toBe('2022-12-20 20:40:01');
+            expect(validatable.inclusive).toBeTrue();
+
+        });
+    });
+
+    describe(`exclusive`,function() {
+
+        let validator = GreaterParameters<string>('2022-12-20 20:40:01', Unit.SECOND, false, GreaterString.Parameters);
+        let validatable = validator('2022-12-20 20:40:00');
+
+        it('validate object', ()=>{
+
+            expect(validatable.valid).toBeFalse();
+            expect(validatable.value).toBe('2022-12-20 20:40:00');
+            expect(validatable.minimum).toBe('2022-12-20 20:40:01');
+            expect(validatable.inclusive).toBeFalse();
+
+        });
+    });
+});
