@@ -1,6 +1,6 @@
 import Unit from '../../record/unit';
 import {CompareArgument, CompareParameters} from './compare';
-import Minimum from '../../../../number/dist/minimum/minimum';
+import Minimum from '@alirya/number/minimum/minimum';
 import Compatible from '../../compatible';
 /**
  * message for greater validation

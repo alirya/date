@@ -5,7 +5,7 @@ import LowerString from '../assert/string/lower';
 import Validatable from '@alirya/validator/value/validatable';
 import Message from '@alirya/message/message';
 import Maximum from "@alirya/number/maximum/maximum";
-import Inclusive from "../../../number/dist/inclusive/inclusive";
+import Inclusive from '@alirya/number/inclusive/inclusive';
 import {ValidatableParameter} from '@alirya/validator/message/function/validatable';
 import StrictOmit from '@alirya/object/strict-omit';
 import LowerStringParameter from '../assert/string/lower';

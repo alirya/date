@@ -1,7 +1,7 @@
 import {LowerParameters} from '../../../dist/validator/lower';
 import LowerString from '../../../dist/assert/string/lower';
 import Unit from '../../../dist/record/unit';
-import RandomInteger from '../../../../number/dist/random-integer';
+import RandomInteger from '@alirya/number/random-integer';
 
 function randomHour() : string {
 

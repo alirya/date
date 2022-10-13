@@ -5,10 +5,10 @@ import MemoizeAccessor from '@alirya/object/function/memoize-accessor';
 import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
 import ValueDynamic from '@alirya/validator/value/validatable';
 import Maximum from "@alirya/number/maximum/maximum";
-import Inclusive from "../../../number/dist/inclusive/inclusive";
-import {LowerParameters as NumberLowerParameters} from '../../../number/dist/validatable/lower';
+import Inclusive from '@alirya/number/inclusive/inclusive';
+import {LowerParameters as NumberLowerParameters} from '@alirya/number/validatable/lower';
 import Concat from '../number/concat';
-import {LowerParameters as LowerMessageParameters} from '../../../number/dist/assert/string/lower';
+import {LowerParameters as LowerMessageParameters} from '@alirya/number/assert/string/lower';
 import Unit from '../record/unit';
 import Compatible from '../compatible';
 

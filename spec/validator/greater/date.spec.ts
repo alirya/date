@@ -1,7 +1,7 @@
 import {GreaterParameters} from '../../../dist/validator/greater';
 import GreaterString from '../../../dist/assert/string/greater';
 import Unit from '../../../dist/record/unit';
-import RandomInteger from '../../../../number/dist/random-integer';
+import RandomInteger from '@alirya/number/random-integer';
 
 function randomHour() : string {
 

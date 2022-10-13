@@ -2,7 +2,7 @@ import Value from '@alirya/value/value';
 import Validatable from '@alirya/validatable/validatable';
 import Unit from '../../record/unit';
 import UnitToString from '../../string/unit';
-import Inclusive from '../../../../number/dist/inclusive/inclusive';
+import Inclusive from '@alirya/number/inclusive/inclusive';
 import Compatible from '../../compatible';
 /**
  * message for compare validation

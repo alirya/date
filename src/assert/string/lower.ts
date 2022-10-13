@@ -1,5 +1,5 @@
 import Unit from '../../record/unit';
-import Maximum from '../../../../number/dist/maximum/maximum';
+import Maximum from '@alirya/number/maximum/maximum';
 import {CompareArgument, CompareParameters} from './compare';
 import Compatible from '../../compatible';
 /**
