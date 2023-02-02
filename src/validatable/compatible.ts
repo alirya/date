@@ -10,19 +10,19 @@ import CompatibleType from '../compatible';
 
 export function CompatibleParameters<Argument>(
     value : Argument,
-) : Return<Argument, CompatibleType, Readonly<Instance<Argument, string>>>;
+) : Return<Argument, CompatibleType, string>;
 
 export function CompatibleParameters<MessageT, Argument>(
     value : Argument,
     message : ValidatableParameters<Argument, MessageT>
-) : Return<Argument, CompatibleType, Readonly<Instance<Argument, MessageT>>>;
+) : Return<Argument, CompatibleType, MessageT>;
 
 export function CompatibleParameters<MessageT, Argument>(
     value : Argument,
     message : ValidatableParameters<Argument, MessageT|string> = DateMessage.Parameters
-) : Return<Argument, CompatibleType, Readonly<Instance<Argument, MessageT>>> {
+) : Return<Argument, CompatibleType, MessageT|string> {
 
-    return <Return<Argument, CompatibleType, Readonly<Instance<Argument, MessageT>>>> CallbackParameters(value, CompatibleGuard, message);
+    return <Return<Argument, CompatibleType, MessageT|string>> CallbackParameters(value, CompatibleGuard, message);
 }
 
 
@@ -37,7 +37,7 @@ export function CompatibleParameter<MessageT, Argument>(
         value,
         message,
     } : Value<Argument> & Message<ValidatableParameter<Argument, MessageT>>
-) : Return<Argument, CompatibleType, Readonly<Instance<Argument, MessageT>>>;
+) : Return<Argument, CompatibleType, MessageT>;
 
 export function CompatibleParameter<MessageT, Argument>(
     {
@@ -45,7 +45,7 @@ export function CompatibleParameter<MessageT, Argument>(
         message = DateMessage.Parameter,
     } : Value<Argument> & Message<ValidatableParameter<Argument, MessageT|string>>
 
-) : Return<Argument, CompatibleType, Readonly<Instance<Argument, MessageT|string>>> {
+) : Return<Argument, CompatibleType, MessageT|string> {
 
     return CompatibleParameters(value, (value, valid) => message({value, valid}));
 }

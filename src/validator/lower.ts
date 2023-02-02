@@ -17,21 +17,21 @@ export function LowerParameters<MessageT> (
     maximum : Compatible,
     unit: Unit,
     inclusive : boolean,
-) : Validator<Compatible, Compatible, boolean, boolean, LowerValidatable.Type<Compatible, MessageT>>;
+) : Validator<Compatible, Compatible, boolean, boolean, MessageT, LowerValidatable.Context>;
 
 export function LowerParameters<MessageT> (
     maximum : Compatible,
     unit: Unit,
     inclusive : boolean,
     message : ValidatableParameters<Compatible, MessageT, [maximum:Compatible, unit: Unit, inclusive: boolean]>
-) : Validator<Compatible, Compatible, boolean, boolean, LowerValidatable.Type<Compatible, MessageT>>;
+) : Validator<Compatible, Compatible, boolean, boolean, MessageT, LowerValidatable.Context>;
 
 export function LowerParameters<MessageT> (
     maximum : Compatible,
     unit: Unit,
     inclusive : boolean,
     message : ValidatableParameters<Compatible, MessageT|string, [maximum:Compatible, unit: Unit, inclusive: boolean]> = LowerString.Parameters
-) : Validator<Compatible, Compatible, boolean, boolean, LowerValidatable.Type<Compatible, MessageT>> {
+) : Validator<Compatible, Compatible, boolean, boolean, MessageT|string, LowerValidatable.Context> {
 
     const compatible = CompatibleParameters();
 
@@ -46,7 +46,7 @@ export function LowerParameters<MessageT> (
 
         return new LowerValidatable.Parameters(value, maximum, unit, inclusive, message);
 
-    } as Validator<Compatible, Compatible, boolean, boolean, LowerValidatable.Type<Date, MessageT>>;
+    } as Validator<Compatible, Compatible, boolean, boolean, MessageT|string, LowerValidatable.Context>;
 }
 
 
@@ -64,7 +64,7 @@ export function LowerParameter<MessageT>(
         inclusive,
         message,
     } : Required<LowerArgument<MessageT>>
-) : Validator<Compatible, Compatible, boolean, boolean, LowerValidatable.Type<Compatible, MessageT>>;
+) : Validator<Compatible, Compatible, boolean, boolean, MessageT, LowerValidatable.Context>;
 
 export function LowerParameter<MessageT>(
     {
@@ -72,7 +72,7 @@ export function LowerParameter<MessageT>(
         unit,
         inclusive,
     } : StrictOmit<LowerArgument<MessageT>, 'message'>
-) : Validator<Compatible, Compatible, boolean, boolean, LowerValidatable.Type<Compatible, MessageT>>;
+) : Validator<Compatible, Compatible, boolean, boolean, MessageT, LowerValidatable.Context>;
 
 export function LowerParameter<MessageT>(
     {
@@ -81,7 +81,7 @@ export function LowerParameter<MessageT>(
         inclusive,
         message = LowerStringParameter.Parameter,
     } : LowerArgument<MessageT|string>
-) : Validator<Compatible, Compatible, boolean, boolean, LowerValidatable.Type<Compatible, MessageT|string>> {
+) : Validator<Compatible, Compatible, boolean, boolean, MessageT|string, LowerValidatable.Context> {
 
     return LowerParameters(
         maximum,

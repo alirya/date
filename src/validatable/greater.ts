@@ -1,5 +1,6 @@
 import Value from '@alirya/value/value';
 import Validatable from '@alirya/validatable/validatable';
+import ValidatorValidatable from '@alirya/validator/validatable/validatable';
 import Message from '@alirya/message/message';
 import MemoizeAccessor from '@alirya/object/function/memoize-accessor';
 import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
@@ -12,17 +13,17 @@ import {GreaterParameters as GreaterMessageParameters} from '@alirya/number/asse
 import Unit from '../record/unit';
 import Compatible from '../compatible';
 
-export interface GreaterType<ValueT extends Compatible, MessageT> extends
+export interface GreaterContext/*<ValueT extends Compatible, MessageT>*/ extends
     Readonly<Inclusive>,
-    Readonly<Value<ValueT>>,
-    Readonly<Message<MessageT>>,
-    Readonly<Validatable>,
+    // Readonly<Value<ValueT>>,
+    // Readonly<Message<MessageT>>,
+    // Readonly<Validatable>,
     Readonly<Minimum<Compatible>> {
 }
 export type GreaterArgumentsMessage<ValueT extends Compatible, MessageT> = ValidatableParameters<ValueT, MessageT, [minimum:Compatible, unit : Unit, inclusive: boolean]>;
 
 
-export class GreaterParameters<ValueT extends Compatible, MessageT> implements GreaterType<ValueT, MessageT>
+export class GreaterParameters<ValueT extends Compatible, MessageT> implements ValidatorValidatable<ValueT, MessageT>, GreaterContext
 {
     #message : GreaterArgumentsMessage<ValueT, MessageT>;
 
@@ -98,7 +99,7 @@ export class GreaterParameter<ValueT extends Compatible, MessageT> extends Great
 namespace Greater {
     export const Parameters = GreaterParameters;
     export const Parameter = GreaterParameter;
-    export type Type<ValueT extends Compatible, MessageT> = GreaterType<ValueT, MessageT>;
+    export type Context/*<ValueT extends Compatible, MessageT>*/ = GreaterContext/*<ValueT, MessageT>*/;
     export type Argument<ValueT extends Compatible, MessageT> = GreaterArgument<ValueT, MessageT>;
 }
 export default Greater;

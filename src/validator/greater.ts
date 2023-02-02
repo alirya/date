@@ -18,21 +18,21 @@ export function GreaterParameters(
     minimum : Compatible,
     unit: Unit,
     inclusive : boolean,
-) : Validator<Compatible, Compatible, boolean, boolean, GreaterValidatable.Type<Compatible, string>>;
+) : Validator<Compatible, Compatible, boolean, boolean, string, GreaterValidatable.Context>;
 
 export function GreaterParameters<MessageT>(
     minimum : Compatible,
     unit: Unit,
     inclusive : boolean,
     message : GreaterArgumentsMessage<MessageT>
-) : Validator<Compatible, Compatible, boolean, boolean, GreaterValidatable.Type<Compatible, MessageT>>;
+) : Validator<Compatible, Compatible, boolean, boolean, MessageT, GreaterValidatable.Context>;
 
 export function GreaterParameters<MessageT>(
     minimum : Compatible,
     unit: Unit,
     inclusive : boolean,
     message : GreaterArgumentsMessage<MessageT|string> = GreaterString.Parameters
-) : Validator<Compatible, Compatible, boolean, boolean, GreaterValidatable.Type<Compatible, MessageT|string>> {
+) : Validator<Compatible, Compatible, boolean, boolean, MessageT|string, GreaterValidatable.Context> {
 
     const compatible = CompatibleParameters();
 
@@ -47,7 +47,7 @@ export function GreaterParameters<MessageT>(
 
         return new GreaterValidatable.Parameters(value, minimum, unit, inclusive, message);
 
-    } as Validator<Compatible, Compatible, boolean, boolean, GreaterValidatable.Type<number, MessageT>>;
+    } as Validator<Compatible, Compatible, boolean, boolean, MessageT, GreaterValidatable.Context>;
 
 }
 
@@ -67,7 +67,7 @@ export function GreaterParameter<MessageT>(
         inclusive,
         message,
     } : Required<GreaterArgument<MessageT>>
-) : Validator<Compatible, Compatible, boolean, boolean, GreaterValidatable.Type<Compatible, MessageT>>;
+) : Validator<Compatible, Compatible, boolean, boolean, MessageT, GreaterValidatable.Context>;
 
 export function GreaterParameter<MessageT>(
     {
@@ -75,7 +75,7 @@ export function GreaterParameter<MessageT>(
         unit,
         inclusive,
     } : StrictOmit<GreaterArgument<MessageT>, 'message'>
-) : Validator<Compatible, Compatible, boolean, boolean, GreaterValidatable.Type<Compatible, MessageT>>;
+) : Validator<Compatible, Compatible, boolean, boolean, MessageT, GreaterValidatable.Context>;
 
 
 export function GreaterParameter<MessageType>(
@@ -85,7 +85,7 @@ export function GreaterParameter<MessageType>(
         unit,
         message = GreaterString.Parameter,
     } : Required<GreaterArgument<MessageType|string>>
-) : Validator<Compatible, Compatible, boolean, boolean, GreaterValidatable.Type<Compatible, MessageType|string>>  {
+) : Validator<Compatible, Compatible, boolean, boolean, MessageType|string, GreaterValidatable.Context>  {
 
     return GreaterParameters(
         minimum,

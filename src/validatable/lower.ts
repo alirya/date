@@ -1,5 +1,6 @@
 import Value from '@alirya/value/value';
 import Validatable from '@alirya/validatable/validatable';
+import ValidatorValidatable from '@alirya/validator/validatable/validatable';
 import Message from '@alirya/message/message';
 import MemoizeAccessor from '@alirya/object/function/memoize-accessor';
 import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
@@ -12,17 +13,17 @@ import {LowerParameters as LowerMessageParameters} from '@alirya/number/assert/s
 import Unit from '../record/unit';
 import Compatible from '../compatible';
 
-export interface LowerType<ValueT extends Compatible, MessageT> extends
+export interface LowerContext/*<ValueT extends Compatible, MessageT>*/ extends
     Readonly<Inclusive>,
-    Readonly<Value<ValueT>>,
-    Readonly<Message<MessageT>>,
-    Readonly<Validatable>,
+    // Readonly<Value<ValueT>>,
+    // Readonly<Message<MessageT>>,
+    // Readonly<Validatable>,
     Readonly<Maximum<Compatible>> {
 }
 export type LowerArgumentsMessage<ValueT extends Compatible, MessageT> = ValidatableParameters<ValueT, MessageT, [minimum:Compatible, unit : Unit, inclusive: boolean]>;
 
 
-export class LowerParameters<ValueT extends Compatible, MessageT> implements LowerType<ValueT, MessageT>
+export class LowerParameters<ValueT extends Compatible, MessageT> implements ValidatorValidatable<ValueT, MessageT>, LowerContext
 {
     #message : LowerArgumentsMessage<ValueT, MessageT>;
 
@@ -67,7 +68,10 @@ export type LowerArgument<ValueT extends Compatible, MessageT> =
 };
 
 
-export type LowerArgumentMessage<ValueT extends Compatible, MessageT> = ValidatableParameter<ValueT, MessageT, Inclusive & Maximum<Compatible> & ValueDynamic<ValueT> & {unit: Unit}>;
+export type LowerArgumentMessage<ValueT extends Compatible, MessageT> = ValidatableParameter<
+    ValueT,
+    MessageT,
+    Inclusive & Maximum<Compatible> & ValueDynamic<ValueT> & {unit: Unit}>;
 
 export class LowerParameter<ValueT extends Compatible, MessageT> extends LowerParameters<ValueT, MessageT> {
 
@@ -98,7 +102,7 @@ export class LowerParameter<ValueT extends Compatible, MessageT> extends LowerPa
 namespace Lower {
     export const Parameters = LowerParameters;
     export const Parameter = LowerParameter;
-    export type Type<ValueT extends Compatible, MessageT> = LowerType<ValueT, MessageT>;
+    export type Context/*<ValueT extends Compatible, MessageT>*/ = LowerContext;
     export type Argument<ValueT extends Compatible, MessageT> = LowerArgument<ValueT, MessageT>;
 }
 export default Lower;

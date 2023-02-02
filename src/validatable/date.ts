@@ -9,18 +9,18 @@ import Message from '@alirya/message/message';
 
 export function DateParameters<Argument>(
     value : Argument,
-) : Return<Argument, Date, Readonly<Instance<Argument, string>>>;
+) : Return<Argument, Date, string>;
 
 export function DateParameters<MessageT, Argument>(
     value : Argument,
     message : ValidatableParameters<Argument, MessageT>
-) : Return<Argument, Date, Readonly<Instance<Argument, MessageT>>>;
+) : Return<Argument, Date, MessageT>;
 export function DateParameters<MessageT, Argument>(
     value : Argument,
     message : ValidatableParameters<Argument, MessageT|string> = DateMessage.Parameters
-) : Return<Argument, Date, Readonly<Instance<Argument, MessageT>>> {
+) : Return<Argument, Date, MessageT|string> {
 
-    return <Return<Argument, Date, Readonly<Instance<Argument, MessageT>>>> CallbackParameters(value, DateGuard, message);
+    return <Return<Argument, Date, MessageT|string>> CallbackParameters(value, DateGuard, message);
 }
 
 
@@ -28,20 +28,20 @@ export function DateParameter<Argument>(
     {
         value,
     } :  Value<Argument>
-) : Return<Argument, Date, Readonly<Instance<Argument, string>>>;
+) : Return<Argument, Date, string>;
 
 export function DateParameter<MessageT, Argument>(
     {
         value,
         message,
     } : Value<Argument> & Message<ValidatableParameter<Argument, MessageT>>
-) : Return<Argument, Date, Readonly<Instance<Argument, MessageT>>>;
+) : Return<Argument, Date, MessageT>;
 export function DateParameter<MessageT, Argument>(
     {
         value,
         message = DateMessage.Parameter,
     } : Value<Argument> & Message<ValidatableParameter<Argument, MessageT|string>>
-) : Return<Argument, Date, Readonly<Instance<Argument, MessageT|string>>> {
+) : Return<Argument, Date, MessageT|string> {
 
     return DateParameters(value, (value, valid) => message({value, valid}));
 }
