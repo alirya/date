@@ -1,6 +1,6 @@
-import AssertDate from '../assert/date';
-import DateError from '../assert/throwable/date';
-import Value from '@alirya/value/value';
+import AssertDate from '../assert/date.js';
+import DateError from '../assert/throwable/date.js';
+import Value from '@alirya/value/value.js';
 
 export function DateParameters(
     value : unknown,

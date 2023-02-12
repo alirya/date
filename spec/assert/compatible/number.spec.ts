@@ -1,10 +1,10 @@
-import Compatible from '../../../dist/assert/compatible';
+import Compatible from '../../../dist/assert/compatible.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`integer`, () => {
 
-    let value = 1;
+    const value = 1;
     Compatible(value);
     expect(value).toBe(1);
 });

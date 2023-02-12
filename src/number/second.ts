@@ -1,4 +1,4 @@
-import SecondFraction from './second-fraction';
+import SecondFraction from './second-fraction.js';
 
 export default function Second(date : Date) : number {
 

@@ -1,7 +1,7 @@
-import {GreaterParameters} from '../../../dist/validator/greater';
-import GreaterString from '../../../dist/assert/string/greater';
-import Unit from '../../../dist/record/unit';
-import RandomInteger from '@alirya/number/random-integer';
+import {GreaterParameters} from '../../../dist/validator/greater.js';
+import GreaterString from '../../../dist/assert/string/greater.js';
+import Unit from '../../../dist/record/unit.js';
+import RandomInteger from '@alirya/number/random-integer.js';
 
 function randomHour() : string {
 
@@ -19,8 +19,8 @@ describe(`value equal to minimum`,function() {
         const value = randomHour();
         const argument = randomHour();
 
-        let validator = GreaterParameters<string>( `2022-12-01 ${argument}`, Unit.DAY, true, GreaterString.Parameters);
-        let validatable = validator(`2022-12-01 ${value}`);
+        const validator = GreaterParameters<string>( `2022-12-01 ${argument}`, Unit.DAY, true, GreaterString.Parameters);
+        const validatable = validator(`2022-12-01 ${value}`);
 
         it('validate object', ()=>{
 
@@ -37,8 +37,8 @@ describe(`value equal to minimum`,function() {
         const value = randomHour();
         const argument = randomHour();
 
-        let validator = GreaterParameters<string>(`2022-12-01 ${argument}`, Unit.DAY, false, GreaterString.Parameters);
-        let validatable = validator(`2022-12-01 ${value}`);
+        const validator = GreaterParameters<string>(`2022-12-01 ${argument}`, Unit.DAY, false, GreaterString.Parameters);
+        const validatable = validator(`2022-12-01 ${value}`);
 
         it('validate object', ()=>{
 
@@ -58,8 +58,8 @@ describe(`value greater to minimum`,function() {
         const value = randomHour();
         const argument = randomHour();
 
-        let validator = GreaterParameters<string>( `2022-12-01 ${argument}`, Unit.DAY, true, GreaterString.Parameters);
-        let validatable = validator(`2022-12-02 ${value}`);
+        const validator = GreaterParameters<string>( `2022-12-01 ${argument}`, Unit.DAY, true, GreaterString.Parameters);
+        const validatable = validator(`2022-12-02 ${value}`);
 
         it('validate object', ()=>{
 
@@ -76,8 +76,8 @@ describe(`value greater to minimum`,function() {
         const value = randomHour();
         const argument = randomHour();
 
-        let validator = GreaterParameters<string>(`2022-12-01 ${argument}`, Unit.DAY, false, GreaterString.Parameters);
-        let validatable = validator(`2022-12-02 ${value}`);
+        const validator = GreaterParameters<string>(`2022-12-01 ${argument}`, Unit.DAY, false, GreaterString.Parameters);
+        const validatable = validator(`2022-12-02 ${value}`);
 
         it('validate object', ()=>{
 
@@ -97,8 +97,8 @@ describe(`value lower to minimum`,function() {
         const value = randomHour();
         const argument = randomHour();
 
-        let validator = GreaterParameters<string>(`2022-12-02 ${argument}`, Unit.DAY, true, GreaterString.Parameters);
-        let validatable = validator(`2022-12-01 ${value}`);
+        const validator = GreaterParameters<string>(`2022-12-02 ${argument}`, Unit.DAY, true, GreaterString.Parameters);
+        const validatable = validator(`2022-12-01 ${value}`);
 
         it('validate object', ()=>{
 
@@ -115,8 +115,8 @@ describe(`value lower to minimum`,function() {
         const value = randomHour();
         const argument = randomHour();
 
-        let validator = GreaterParameters<string>(`2022-12-02 ${argument}`, Unit.DAY, false, GreaterString.Parameters);
-        let validatable = validator(`2022-12-01 ${value}`);
+        const validator = GreaterParameters<string>(`2022-12-02 ${argument}`, Unit.DAY, false, GreaterString.Parameters);
+        const validatable = validator(`2022-12-01 ${value}`);
 
         it('validate object', ()=>{
 

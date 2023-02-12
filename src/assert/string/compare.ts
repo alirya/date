@@ -1,9 +1,9 @@
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import Unit from '../../record/unit';
-import UnitToString from '../../string/unit';
-import Inclusive from '@alirya/number/inclusive/inclusive';
-import Compatible from '../../compatible';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Unit from '../../record/unit.js';
+import UnitToString from '../../string/unit.js';
+import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import Compatible from '../../compatible.js';
 /**
  * message for compare validation
  */
@@ -15,7 +15,7 @@ export function CompareParameters(
     compare : Compatible,
     unit : Unit,
     inclusive : boolean,
-    subject : string = 'value',
+    subject  = 'value',
 ) : string {
 
     value = new Date(value);
@@ -23,9 +23,9 @@ export function CompareParameters(
 
     let string;
 
-    let unitString = UnitToString(unit);
+    const unitString = UnitToString(unit);
 
-    let inclusiveString = inclusive ? `${type} or equal than` : `${type} than`;
+    const inclusiveString = inclusive ? `${type} or equal than` : `${type} than`;
 
     if(valid) {
 

@@ -1,9 +1,9 @@
-import Validator from '@alirya/validator/simple';
-import DateValidatable from '../validatable/date';
-import Instance from '@alirya/validator/validatable/validatable';
-import SimpleValidatable from '@alirya/validator/validatable/simple';
-import DateMessage from '../assert/string/compatible';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
+import Validator from '@alirya/validator/simple.js';
+import DateValidatable from '../validatable/date.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import SimpleValidatable from '@alirya/validator/validatable/simple.js';
+import DateMessage from '../assert/string/compatible.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
 
 export function DateParameters() : Validator<unknown, globalThis.Date, string>;
 

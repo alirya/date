@@ -1,14 +1,14 @@
-import {LowerParameters} from '../../../dist/validator/lower';
-import LowerString from '../../../dist/assert/string/lower';
-import Unit from '../../../dist/record/unit';
+import {LowerParameters} from '../../../dist/validator/lower.js';
+import LowerString from '../../../dist/assert/string/lower.js';
+import Unit from '../../../dist/record/unit.js';
 
 
 describe(`value equal to maximum`,function() {
 
     describe(`inclusive`,function() {
 
-        let validator = LowerParameters<string>( '2022-12-20 20:40:00', Unit.SECOND, true, LowerString.Parameters);
-        let validatable = validator('2022-12-20 20:40:00');
+        const validator = LowerParameters<string>( '2022-12-20 20:40:00', Unit.SECOND, true, LowerString.Parameters);
+        const validatable = validator('2022-12-20 20:40:00');
 
         it('validate object', ()=>{
 
@@ -22,8 +22,8 @@ describe(`value equal to maximum`,function() {
 
     describe(`exclusive`,function() {
 
-        let validator = LowerParameters<string>('2022-12-20 20:40:00', Unit.SECOND, false, LowerString.Parameters);
-        let validatable = validator('2022-12-20 20:40:00');
+        const validator = LowerParameters<string>('2022-12-20 20:40:00', Unit.SECOND, false, LowerString.Parameters);
+        const validatable = validator('2022-12-20 20:40:00');
 
         it('validate object', ()=>{
 
@@ -40,8 +40,8 @@ describe(`value lower to maximum`,function() {
 
     describe(`inclusive`,function() {
 
-        let validator = LowerParameters<string>( '2022-12-20 20:40:01', Unit.SECOND, true, LowerString.Parameters);
-        let validatable = validator('2022-12-20 20:40:02');
+        const validator = LowerParameters<string>( '2022-12-20 20:40:01', Unit.SECOND, true, LowerString.Parameters);
+        const validatable = validator('2022-12-20 20:40:02');
 
         it('validate object', ()=>{
 
@@ -55,8 +55,8 @@ describe(`value lower to maximum`,function() {
 
     describe(`exclusive`,function() {
 
-        let validator = LowerParameters<string>('2022-12-20 20:40:01', Unit.SECOND, false, LowerString.Parameters);
-        let validatable = validator('2022-12-20 20:40:02');
+        const validator = LowerParameters<string>('2022-12-20 20:40:01', Unit.SECOND, false, LowerString.Parameters);
+        const validatable = validator('2022-12-20 20:40:02');
 
         it('validate object', ()=>{
 
@@ -73,8 +73,8 @@ describe(`value lower to maximum`,function() {
 
     describe(`inclusive`,function() {
 
-        let validator = LowerParameters<string>('2022-12-20 20:40:01', Unit.SECOND, true, LowerString.Parameters);
-        let validatable = validator('2022-12-20 20:40:00');
+        const validator = LowerParameters<string>('2022-12-20 20:40:01', Unit.SECOND, true, LowerString.Parameters);
+        const validatable = validator('2022-12-20 20:40:00');
 
         it('validate object', ()=>{
 
@@ -88,8 +88,8 @@ describe(`value lower to maximum`,function() {
 
     describe(`exclusive`,function() {
 
-        let validator = LowerParameters<string>('2022-12-20 20:40:01', Unit.SECOND, false, LowerString.Parameters);
-        let validatable = validator('2022-12-20 20:40:00');
+        const validator = LowerParameters<string>('2022-12-20 20:40:01', Unit.SECOND, false, LowerString.Parameters);
+        const validatable = validator('2022-12-20 20:40:00');
 
         it('validate object', ()=>{
 

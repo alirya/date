@@ -1,6 +1,6 @@
-import Guard from '../boolean/date';
-import {CallbackParameters} from '@alirya/function/assert/callback';
-import DateError from './throwable/date';
+import Guard from '../boolean/date.js';
+import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import DateError from './throwable/date.js';
 
 export default function Date(
     value : unknown,

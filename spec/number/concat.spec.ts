@@ -1,6 +1,6 @@
-import Second from '../../dist/number/second';
-import Concat from '../../dist/number/concat';
-import Unit from '../../dist/record/unit';
+import Second from '../../dist/number/second.js';
+import Concat from '../../dist/number/concat.js';
+import Unit from '../../dist/record/unit.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

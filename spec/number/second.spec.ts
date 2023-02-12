@@ -1,4 +1,4 @@
-import Second from '../../dist/number/second';
+import Second from '../../dist/number/second.js';
 
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
@@ -7,13 +7,13 @@ describe('second', () => {
 
     it('valid', () => {
 
-        let millisecond = 1472502588123;
+        const millisecond = 1472502588123;
 
-        let date = new Date(millisecond);
+        const date = new Date(millisecond);
 
-        let actual = Second(date);
+        const actual = Second(date);
 
-        let expectation = Math.floor(millisecond / 1000);
+        const expectation = Math.floor(millisecond / 1000);
 
         expect(expectation).toBe(actual);
     });

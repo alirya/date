@@ -1,4 +1,4 @@
-import Compatible from '../../../dist/assert/compatible';
+import Compatible from '../../../dist/assert/compatible.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -22,7 +22,7 @@ it(`object`, () => {
 
 it(`compatible `, () => {
 
-    let value = 'Monday, 29-Aug-16 20:29:48 UTC';
+    const value = 'Monday, 29-Aug-16 20:29:48 UTC';
     Compatible(value);
     expect(value).toBe(value);
 });

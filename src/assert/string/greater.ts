@@ -1,7 +1,7 @@
-import Unit from '../../record/unit';
-import {CompareArgument, CompareParameters} from './compare';
-import Minimum from '@alirya/number/minimum/minimum';
-import Compatible from '../../compatible';
+import Unit from '../../record/unit.js';
+import {CompareArgument, CompareParameters} from './compare.js';
+import Minimum from '@alirya/number/minimum/minimum.js';
+import Compatible from '../../compatible.js';
 /**
  * message for greater validation
  */
@@ -11,7 +11,7 @@ export function GreaterParameters(
     minimum : Compatible,
     unit : Unit,
     inclusive : boolean,
-    subject : string = 'value'
+    subject  = 'value'
 ) : string {
 
     return CompareParameters(

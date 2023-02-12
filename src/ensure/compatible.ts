@@ -1,7 +1,7 @@
-import AssertCompatible from '../assert/compatible';
-import CompatibleError from '../assert/throwable/compatible';
-import Value from '@alirya/value/value';
-import CompatibleType from '../compatible';
+import AssertCompatible from '../assert/compatible.js';
+import CompatibleError from '../assert/throwable/compatible.js';
+import Value from '@alirya/value/value.js';
+import CompatibleType from '../compatible.js';
 
 export function CompatibleParameters(
     value : unknown,

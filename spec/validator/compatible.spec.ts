@@ -1,5 +1,5 @@
-import Compatible from '../../dist/validator/compatible';
-import StringMessage from '../../dist/assert/string/compatible';
+import Compatible from '../../dist/validator/compatible.js';
+import StringMessage from '../../dist/assert/string/compatible.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -7,38 +7,38 @@ describe(`compiler compatible`,function() {
 
     it(`valid value`,function() {
 
-        let validator = Compatible.Parameters(StringMessage.Parameters);
-        let validatable = validator(<unknown>'Monday, 29-Aug-16 20:29:48 UTC');
+        const validator = Compatible.Parameters(StringMessage.Parameters);
+        const validatable = validator(<unknown>'Monday, 29-Aug-16 20:29:48 UTC');
 
         if(validatable.valid) {
 
             // compiler pass
-            let string : Date|number|string = validatable.value;
+            const string : Date|number|string = validatable.value;
             expect(string).toBe('Monday, 29-Aug-16 20:29:48 UTC');
 
         } else {
 
             // @ts-expect-error
-            let string : Date|number|string = validatable.value;
+            const string : Date|number|string = validatable.value;
             fail('validatable.valid should false');
         }
     });
 
     it(`invalid value`,function() {
 
-        let validator = Compatible.Parameters(StringMessage.Parameters);
-        let validatable = validator({});
+        const validator = Compatible.Parameters(StringMessage.Parameters);
+        const validatable = validator({});
 
         if(validatable.valid) {
 
             // compiler pass
-            let string : Date|number|string = validatable.value;
+            const string : Date|number|string = validatable.value;
             fail('validatable.valid should false');
 
         } else {
 
             // @ts-expect-error
-            let string : Date|number|string = validatable.value;
+            const string : Date|number|string = validatable.value;
             // @ts-expect-error
             expect(string).toEqual({});
         }
@@ -46,8 +46,8 @@ describe(`compiler compatible`,function() {
 
     it(`readonly`,function() {
 
-        let validator = Compatible.Parameters(StringMessage.Parameters);
-        let validatable = validator('1');
+        const validator = Compatible.Parameters(StringMessage.Parameters);
+        const validatable = validator('1');
 
         try {
             // @ts-expect-error
@@ -62,7 +62,7 @@ describe(`compiler compatible`,function() {
 
         try {
             // @ts-expect-error
-            validatable.message = 'message';
+            validatable.message.js = 'message.js';
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -74,8 +74,8 @@ describe(`compiler compatible`,function() {
 
 it(`valid`,function() {
 
-    let validator = Compatible.Parameters(StringMessage.Parameters);
-    let validatable = validator('Monday, 29-Aug-16 20:29:48 UTC');
+    const validator = Compatible.Parameters(StringMessage.Parameters);
+    const validatable = validator('Monday, 29-Aug-16 20:29:48 UTC');
 
     expect(validatable.valid).toBe(true);
     expect(validatable.value).toBe('Monday, 29-Aug-16 20:29:48 UTC');
@@ -85,8 +85,8 @@ it(`valid`,function() {
 
 it(`invalid`,function() {
 
-    let validator = Compatible.Parameters(StringMessage.Parameters);
-    let validatable = validator('C');
+    const validator = Compatible.Parameters(StringMessage.Parameters);
+    const validatable = validator('C');
 
     expect<boolean>(validatable.valid).toBe(false);
     expect(validatable.value).toBe('C');

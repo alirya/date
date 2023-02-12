@@ -1,11 +1,11 @@
-import {CallbackParameters} from '@alirya/validator/validatable/callback';
-import DateGuard from '../boolean/date';
-import Return from '@alirya/validator/validatable/simple';
-import Instance from '@alirya/validator/validatable/validatable';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import DateMessage from '../assert/string/date';
-import Value from '@alirya/value/value';
-import Message from '@alirya/message/message';
+import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import DateGuard from '../boolean/date.js';
+import Return from '@alirya/validator/validatable/simple.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import DateMessage from '../assert/string/date.js';
+import Value from '@alirya/value/value.js';
+import Message from '@alirya/message/message.js';
 
 export function DateParameters<Argument>(
     value : Argument,

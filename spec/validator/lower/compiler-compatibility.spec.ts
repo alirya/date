@@ -1,12 +1,12 @@
-import {LowerParameters} from '../../../dist/validator/lower';
-import LowerString from '../../../dist/assert/string/lower';
-import Unit from '../../../dist/record/unit';
+import {LowerParameters} from '../../../dist/validator/lower.js';
+import LowerString from '../../../dist/assert/string/lower.js';
+import Unit from '../../../dist/record/unit.js';
 
 
 describe(`compiler compatible`,function() {
 
-    let validator = LowerParameters<string>(1, Unit.DAY, false, LowerString.Parameters);
-    let validatable = validator(2);
+    const validator = LowerParameters<string>(1, Unit.DAY, false, LowerString.Parameters);
+    const validatable = validator(2);
 
     it('set valid', ()=>{
 

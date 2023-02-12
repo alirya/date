@@ -1,4 +1,4 @@
-import Undefined from '../../../dist/assert/date';
+import Undefined from '../../../dist/assert/date.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

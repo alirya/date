@@ -1,18 +1,18 @@
-import Compatible from '../../../dist/ensure/compatible';
+import Compatible from '../../../dist/ensure/compatible.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('union', () => {
 
-    let target : Date|number|string|boolean = new Date();
+    const target : Date|number|string|boolean = new Date();
 
     try {
 
-        let result = Compatible.Parameters(target);
+        const result = Compatible.Parameters(target);
 
         // @ts-expect-error
-        let number : boolean = result;
-        let date : Date|number|string = result;
+        const number : boolean = result;
+        const date : Date|number|string = result;
 
     } catch (e) {
 
@@ -21,13 +21,13 @@ it('union', () => {
 
 it('unknown', () => {
 
-    let target : Date|number|string = new Date();
+    const target : Date|number|string = new Date();
 
     try {
 
-        let result = Compatible.Parameters(target);
+        const result = Compatible.Parameters(target);
 
-        let date : Date|number|string = result;
+        const date : Date|number|string = result;
 
     } catch (e) {
 

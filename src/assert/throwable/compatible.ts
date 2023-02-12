@@ -1,7 +1,7 @@
-import CompatibleType from '../string/compatible';
-import Value from '@alirya/value/value';
+import CompatibleType from '../string/compatible.js';
+import Value from '@alirya/value/value.js';
 
-export function CompatibleParameters(value : unknown, subject : string = '') : Error {
+export function CompatibleParameters(value : unknown, subject  = '') : Error {
 
     return new Error(CompatibleType.Parameters(value, false, subject));
 }

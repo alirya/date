@@ -1,10 +1,10 @@
-import Compatible from '../../../dist/ensure/compatible';
+import Compatible from '../../../dist/ensure/compatible.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`integer`, () => {
 
-    let date = 1;
+    const date = 1;
 
     expect(Compatible.Parameters(date)).toBe(date);
 });

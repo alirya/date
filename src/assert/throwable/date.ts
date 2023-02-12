@@ -1,6 +1,6 @@
-import Dateype from '../string/date';
+import Dateype from '../string/date.js';
 
-export function DateParameters(value : unknown, subject : string = '') : Error {
+export function DateParameters(value : unknown, subject  = '') : Error {
 
     return new Error(Dateype.Parameters(value, false, subject));
 }

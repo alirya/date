@@ -1,7 +1,7 @@
-import Unit from '../../record/unit';
-import Maximum from '@alirya/number/maximum/maximum';
-import {CompareArgument, CompareParameters} from './compare';
-import Compatible from '../../compatible';
+import Unit from '../../record/unit.js';
+import Maximum from '@alirya/number/maximum/maximum.js';
+import {CompareArgument, CompareParameters} from './compare.js';
+import Compatible from '../../compatible.js';
 /**
  * message for lower validation
  */
@@ -12,7 +12,7 @@ export function LowerParameters(
     maximum : Compatible,
     unit : Unit,
     inclusive : boolean,
-    subject : string = 'value'
+    subject  = 'value'
 ) : string {
 
     return CompareParameters(

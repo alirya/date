@@ -1,4 +1,4 @@
-import Assert from '../../../dist/assert/date';
+import Assert from '../../../dist/assert/date.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -6,15 +6,15 @@ it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 it('union', () => {
 
 
-    let target : Date|number = new Date;
+    const target : Date|number = new Date;
 
     try {
 
         Assert(target);
 
         // @ts-expect-error
-        let number : number = target;
-        let date : Date = target;
+        const number : number = target;
+        const date : Date = target;
 
     } catch (e) {
 
@@ -23,13 +23,13 @@ it('union', () => {
 
 it('unknown', () => {
 
-    let target : unknown = Date;
+    const target : unknown = Date;
 
     try {
 
         Assert(target);
 
-        let date : Date = target;
+        const date : Date = target;
 
     } catch (e) {
 

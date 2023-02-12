@@ -1,6 +1,6 @@
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import Compatible from './date';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Compatible from './date.js';
 /**
  * string intended for Date message
  *
@@ -12,7 +12,7 @@ import Compatible from './date';
 export function DateParameters(
     value : unknown,
     valid : boolean,
-    subject : string = 'type',
+    subject  = 'type',
     conversion : (value:unknown)=>string = value=>typeof value
 ) : string {
 

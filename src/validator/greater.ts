@@ -1,16 +1,16 @@
-import Validator from '@alirya/validator/validator';
-import GreaterValidatable from '../validatable/greater';
-import {ValidatableParameters} from '@alirya/validator/message/function/validatable';
-import GreaterString from '../assert/string/greater';
-import Validatable from '@alirya/validator/value/validatable';
-import Message from '@alirya/message/message';
-import Minimum from "@alirya/number/minimum/minimum";
-import Inclusive from '@alirya/number/inclusive/inclusive';
-import {ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import StrictOmit from '@alirya/object/strict-omit';
-import Unit from '../record/unit';
-import {CompatibleParameters} from './compatible';
-import Compatible from '../compatible';
+import Validator from '@alirya/validator/validator.js';
+import GreaterValidatable from '../validatable/greater.js';
+import {ValidatableParameters} from '@alirya/validator/message/function/validatable.js';
+import GreaterString from '../assert/string/greater.js';
+import Validatable from '@alirya/validator/value/validatable.js';
+import Message from '@alirya/message/message.js';
+import Minimum from "@alirya/number/minimum/minimum.js";
+import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import {ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import StrictOmit from '@alirya/object/strict-omit.js';
+import Unit from '../record/unit.js';
+import {CompatibleParameters} from './compatible.js';
+import Compatible from '../compatible.js';
 
 export type GreaterArgumentsMessage<MessageT> = ValidatableParameters<number, MessageT, [minimum:number, unit: Unit, inclusive: boolean]>;
 

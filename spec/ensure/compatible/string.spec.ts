@@ -1,4 +1,4 @@
-import {CompatibleParameters} from '../../../dist/ensure/compatible';
+import {CompatibleParameters} from '../../../dist/ensure/compatible.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -23,7 +23,7 @@ it(`object`, () => {
 
 it(`compatible`, () => {
 
-    let date = 'Monday, 29-Aug-16 20:29:48 UTC';
+    const date = 'Monday, 29-Aug-16 20:29:48 UTC';
 
     expect(CompatibleParameters(date)).toBe(date);
 });

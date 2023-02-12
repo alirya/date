@@ -1,12 +1,12 @@
-import UnitEnum from '../record/unit';
-import Compatible from '../compatible';
+import UnitEnum from '../record/unit.js';
+import Compatible from '../compatible.js';
 
 
 export default function Concat(compatible: Compatible, unit: UnitEnum) : number {
 
-    let date = new Date(compatible);
+    const date = new Date(compatible);
 
-    let dates : (number|string)[] = [];
+    const dates : (number|string)[] = [];
 
     switch (unit) {
 

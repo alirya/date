@@ -1,6 +1,6 @@
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import DateMessage from './compatible';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import DateMessage from './compatible.js';
 /**
  * string intended for not Date message
  *
@@ -11,7 +11,7 @@ import DateMessage from './compatible';
 export function CompatibleParameters(
     value : unknown,
     valid : boolean,
-    subject : string = 'type',
+    subject  = 'type',
 ) : string {
 
     const strings : string[] = [];

@@ -1,13 +1,13 @@
-import {GreaterParameters} from '../../../dist/validator/greater';
-import GreaterString from '../../../dist/assert/string/greater';
-import Unit from '../../../dist/record/unit';
+import {GreaterParameters} from '../../../dist/validator/greater.js';
+import GreaterString from '../../../dist/assert/string/greater.js';
+import Unit from '../../../dist/record/unit.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`compiler compatibility`,function() {
 
-    let validator = GreaterParameters<string>(1, Unit.DAY, false, GreaterString.Parameters);
-    let validatable = validator(2);
+    const validator = GreaterParameters<string>(1, Unit.DAY, false, GreaterString.Parameters);
+    const validatable = validator(2);
 
     it('set valid', ()=>{
 

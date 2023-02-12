@@ -1,24 +1,24 @@
-import UnitEnum from '../record/unit';
+import UnitEnum from '../record/unit.js';
 
 export default function Unit(unit: UnitEnum) : string {
 
     switch (unit) {
         case UnitEnum.SECOND:
-            return 'Second';
+            return 'Second.js';
 
         case UnitEnum.MINUTE:
-            return 'Minute';
+            return 'Minute.js';
 
         case UnitEnum.HOUR:
-            return 'Hour';
+            return 'Hour.js';
 
         case UnitEnum.DAY:
-            return 'Day';
+            return 'Day.js';
 
         case UnitEnum.MONTH:
-            return 'Month';
+            return 'Month.js';
 
         case UnitEnum.YEAR:
-            return 'Year';
+            return 'Year.js';
     }
 }

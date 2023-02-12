@@ -1,17 +1,17 @@
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import ValidatorValidatable from '@alirya/validator/validatable/validatable';
-import Message from '@alirya/message/message';
-import MemoizeAccessor from '@alirya/object/function/memoize-accessor';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import ValueDynamic from '@alirya/validator/value/validatable';
-import Minimum from "@alirya/number/minimum/minimum";
-import Inclusive from '@alirya/number/inclusive/inclusive';
-import {GreaterParameters as NumberGreaterParameters} from '@alirya/number/validatable/greater';
-import Concat from '../number/concat';
-import {GreaterParameters as GreaterMessageParameters} from '@alirya/number/assert/string/greater';
-import Unit from '../record/unit';
-import Compatible from '../compatible';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import ValidatorValidatable from '@alirya/validator/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import MemoizeAccessor from '@alirya/object/function/memoize-accessor.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import ValueDynamic from '@alirya/validator/value/validatable.js';
+import Minimum from "@alirya/number/minimum/minimum.js";
+import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import {GreaterParameters as NumberGreaterParameters} from '@alirya/number/validatable/greater.js';
+import Concat from '../number/concat.js';
+import {GreaterParameters as GreaterMessageParameters} from '@alirya/number/assert/string/greater.js';
+import Unit from '../record/unit.js';
+import Compatible from '../compatible.js';
 
 export interface GreaterContext/*<ValueT extends Compatible, MessageT>*/ extends
     Readonly<Inclusive>,
