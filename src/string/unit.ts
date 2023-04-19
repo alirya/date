@@ -4,21 +4,21 @@ export default function Unit(unit: UnitEnum) : string {
 
     switch (unit) {
         case UnitEnum.SECOND:
-            return 'Second.js';
+            return 'Second';
 
         case UnitEnum.MINUTE:
-            return 'Minute.js';
+            return 'Minute';
 
         case UnitEnum.HOUR:
-            return 'Hour.js';
+            return 'Hour';
 
         case UnitEnum.DAY:
-            return 'Day.js';
+            return 'Day';
 
         case UnitEnum.MONTH:
-            return 'Month.js';
+            return 'Month';
 
         case UnitEnum.YEAR:
-            return 'Year.js';
+            return 'Year';
     }
 }
