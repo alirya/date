@@ -1,7 +1,7 @@
-import Instance from '@alirya/validator/validatable/validatable.js';
-import Validator from '@alirya/validator/simple.js';
+import Instance from '@axiona/validator/validatable/validatable.js';
+import Validator from '@axiona/validator/simple.js';
 import CompatibleValidatable from '../validatable/compatible.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 import DateMessage from '../assert/string/date.js';
 import CompatibleType from '../compatible.js';
 

@@ -1,5 +1,5 @@
 import Guard from '../boolean/compatible.js';
-import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import {CallbackParameters} from '@axiona/function/assert/callback.js';
 import CompatibleError from './throwable/compatible.js';
 import CompatibleType from '../compatible.js';
 

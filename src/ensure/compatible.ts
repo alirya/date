@@ -1,6 +1,6 @@
 import AssertCompatible from '../assert/compatible.js';
 import CompatibleError from '../assert/throwable/compatible.js';
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 import CompatibleType from '../compatible.js';
 
 export function CompatibleParameters(

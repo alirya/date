@@ -1,9 +1,9 @@
-import Validator from '@alirya/validator/simple.js';
+import Validator from '@axiona/validator/simple.js';
 import DateValidatable from '../validatable/date.js';
-import Instance from '@alirya/validator/validatable/validatable.js';
-import SimpleValidatable from '@alirya/validator/validatable/simple.js';
+import Instance from '@axiona/validator/validatable/validatable.js';
+import SimpleValidatable from '@axiona/validator/validatable/simple.js';
 import DateMessage from '../assert/string/compatible.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 
 export function DateParameters() : Validator<unknown, globalThis.Date, string>;
 

@@ -1,7 +1,7 @@
 import {GreaterParameters} from '../../../dist/validator/greater.js';
 import GreaterString from '../../../dist/assert/string/greater.js';
 import Unit from '../../../dist/record/unit.js';
-import RandomInteger from '@alirya/number/random-integer.js';
+import RandomInteger from '@axiona/number/random-integer.js';
 
 function randomHour() : string {
 

@@ -1,8 +1,8 @@
-import Value from '@alirya/value/value.js';
-import Validatable from '@alirya/validatable/validatable.js';
+import Value from '@axiona/value/value.js';
+import Validatable from '@axiona/validatable/validatable.js';
 import Unit from '../../record/unit.js';
 import UnitToString from '../../string/unit.js';
-import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import Inclusive from '@axiona/number/inclusive/inclusive.js';
 import Compatible from '../../compatible.js';
 /**
  * message for compare validation

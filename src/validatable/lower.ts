@@ -1,15 +1,15 @@
-import Value from '@alirya/value/value.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import ValidatorValidatable from '@alirya/validator/validatable/validatable.js';
-import Message from '@alirya/message/message.js';
-import MemoizeAccessor from '@alirya/object/function/memoize-accessor.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
-import ValueDynamic from '@alirya/validator/value/validatable.js';
-import Maximum from "@alirya/number/maximum/maximum.js";
-import Inclusive from '@alirya/number/inclusive/inclusive.js';
-import {LowerParameters as NumberLowerParameters} from '@alirya/number/validatable/lower.js';
+import Value from '@axiona/value/value.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import ValidatorValidatable from '@axiona/validator/validatable/validatable.js';
+import Message from '@axiona/message/message.js';
+import MemoizeAccessor from '@axiona/object/function/memoize-accessor.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
+import ValueDynamic from '@axiona/validator/value/validatable.js';
+import Maximum from "@axiona/number/maximum/maximum.js";
+import Inclusive from '@axiona/number/inclusive/inclusive.js';
+import {LowerParameters as NumberLowerParameters} from '@axiona/number/validatable/lower.js';
 import Concat from '../number/concat.js';
-import {LowerParameters as LowerMessageParameters} from '@alirya/number/assert/string/lower.js';
+import {LowerParameters as LowerMessageParameters} from '@axiona/number/assert/string/lower.js';
 import Unit from '../record/unit.js';
 import Compatible from '../compatible.js';
 

@@ -1,6 +1,6 @@
 import Unit from '../../record/unit.js';
 import {CompareArgument, CompareParameters} from './compare.js';
-import Minimum from '@alirya/number/minimum/minimum.js';
+import Minimum from '@axiona/number/minimum/minimum.js';
 import Compatible from '../../compatible.js';
 /**
  * message for greater validation

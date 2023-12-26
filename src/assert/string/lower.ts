@@ -1,5 +1,5 @@
 import Unit from '../../record/unit.js';
-import Maximum from '@alirya/number/maximum/maximum.js';
+import Maximum from '@axiona/number/maximum/maximum.js';
 import {CompareArgument, CompareParameters} from './compare.js';
 import Compatible from '../../compatible.js';
 /**

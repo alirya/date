@@ -1,7 +1,7 @@
 import {LowerParameters} from '../../../dist/validator/lower.js';
 import LowerString from '../../../dist/assert/string/lower.js';
 import Unit from '../../../dist/record/unit.js';
-import RandomInteger from '@alirya/number/random-integer.js';
+import RandomInteger from '@axiona/number/random-integer.js';
 
 function randomHour() : string {
 

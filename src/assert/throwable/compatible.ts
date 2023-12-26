@@ -1,5 +1,5 @@
 import CompatibleType from '../string/compatible.js';
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 
 export function CompatibleParameters(value : unknown, subject  = '') : Error {
 
