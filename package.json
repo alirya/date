@@ -1,6 +1,6 @@
 {
   "name": "@axiona/date",
-  "version": "0.11.1",
+  "version": "0.12.0",
   "description": "Typescript date",
   "publishConfig": {
     "directory": "dist"
@@ -19,14 +19,14 @@
   },
   "dependencies": {
     "tslib": "^2.5.0",
-    "@axiona/function": "^0.17.1",
-    "@axiona/object": "^0.38.1",
-    "@axiona/message": "^0.13.1",
-    "@axiona/number": "^0.18.2",
-    "@axiona/string": "^0.17.1",
-    "@axiona/validatable": "^0.21.1",
-    "@axiona/validator": "^0.20.1",
-    "@axiona/value": "^0.16.1",
+    "@axiona/function": "^0.18.0",
+    "@axiona/object": "^0.39.0",
+    "@axiona/message": "^0.14.0",
+    "@axiona/number": "^0.19.0",
+    "@axiona/string": "^0.18.0",
+    "@axiona/validatable": "^0.22.0",
+    "@axiona/validator": "^0.21.0",
+    "@axiona/value": "^0.17.0",
     "ts-toolbelt": "^9.6.0"
   },
   "devDependencies": {
